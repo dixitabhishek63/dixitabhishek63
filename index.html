@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Abhishek Dixit — Platform Engineer (.NET / Azure / Kubernetes) building cloud-native systems and production AI artifacts." />
+  <title>Abhishek Dixit — Portfolio</title>
+
+  <style>
+    :root{
+      --bg0:#070a12;
+      --bg1:#0b1220;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.55);
+      --accent:#7c5cff;
+      --accent2:#22d3ee;
+      --ok:#34d399;
+      --warn:#fbbf24;
+
+      --shadow: 0 14px 40px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% 0%, rgba(124,92,255,.26), transparent 55%),
+        radial-gradient(900px 600px at 100% 10%, rgba(34,211,238,.20), transparent 50%),
+        radial-gradient(900px 500px at 50% 110%, rgba(52,211,153,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    a:hover{opacity:.95}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,10,18,.82), rgba(7,10,18,.35));
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width:240px;}
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background:
+        radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.16), transparent 55%),
+        linear-gradient(135deg, rgba(124,92,255,.9), rgba(34,211,238,.85));
+      box-shadow: 0 10px 30px rgba(124,92,255,.22);
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .brand .t1{font-weight:750; letter-spacing:.2px}
+    .brand .t2{font-size:12.5px; color:var(--muted2); margin-top:2px}
+
+    .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 12px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      font-size:13px; color:var(--muted);
+    }
+    .pill:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.075);
+      border-color: rgba(255,255,255,.16);
+      color: var(--text);
+    }
+
+    .hero{
+      padding: 34px 0 10px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns: 1fr;}
+      .brand{min-width:auto}
+      .links{justify-content:flex-start}
+    }
+
+    .card{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(800px 220px at 20% 0%, rgba(124,92,255,.20), transparent 55%),
+                  radial-gradient(600px 220px at 80% 0%, rgba(34,211,238,.18), transparent 60%);
+      pointer-events:none;
+      opacity:.9;
+    }
+    .card > .in{position:relative; padding: 22px 22px 20px;}
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-family: var(--mono);
+      font-size:12px;
+      color: rgba(255,255,255,.70);
+      letter-spacing:.4px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--ok);
+      box-shadow: 0 0 0 6px rgba(52,211,153,.12);
+    }
+
+    h1{
+      margin:12px 0 10px;
+      font-size: 44px;
+      line-height: 1.05;
+      letter-spacing: -0.8px;
+    }
+    @media (max-width: 520px){
+      h1{font-size: 36px;}
+    }
+
+    .sub{
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.55;
+      margin: 0 0 16px;
+      max-width: 62ch;
+    }
+
+    .btn-row{display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 650;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.085); border-color: rgba(255,255,255,.18);}
+    .btn.primary{
+      border-color: rgba(124,92,255,.55);
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(34,211,238,.85));
+      box-shadow: 0 16px 40px rgba(124,92,255,.18);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .span-6{grid-column: span 6}
+    .span-12{grid-column: span 12}
+    @media (max-width: 900px){
+      .span-6{grid-column: span 12}
+    }
+
+    .mini{
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.045);
+      padding: 14px 14px 12px;
+    }
+    .mini h3{margin:0 0 8px; font-size:14px; letter-spacing:.2px;}
+    .mini p{margin:0; color: var(--muted); font-size: 13.5px; line-height: 1.45;}
+
+    .section{margin-top: 22px; padding-top: 16px;}
+    .section h2{font-size: 18px; letter-spacing:.2px; margin: 0 0 12px;}
+    .section .hint{margin:-4px 0 14px; color: var(--muted2); font-size: 13.5px; line-height: 1.5;}
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .proj{
+      grid-column: span 6;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.035));
+      overflow:hidden;
+      position:relative;
+      min-height: 188px;
+    }
+    .proj::before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(800px 200px at 18% 0%, rgba(124,92,255,.18), transparent 55%);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .proj .in{position:relative; padding: 16px 16px 14px}
+    .proj h3{margin:0 0 8px; font-size: 15px; letter-spacing:.2px}
+    .proj p{margin:0 0 10px; color:var(--muted); font-size: 13.5px; line-height:1.5}
+    @media (max-width: 900px){ .proj{grid-column: span 12;} }
+
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px}
+    .tag{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(255,255,255,.78);
+      padding: 6px 9px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.16);
+    }
+    .tag.a{border-color: rgba(124,92,255,.30); background: rgba(124,92,255,.10)}
+    .tag.b{border-color: rgba(34,211,238,.28); background: rgba(34,211,238,.08)}
+    .tag.c{border-color: rgba(52,211,153,.26); background: rgba(52,211,153,.08)}
+    .tag.w{border-color: rgba(251,191,36,.24); background: rgba(251,191,36,.08)}
+
+    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
+    @media (max-width: 900px){ .two-col{grid-template-columns:1fr;} }
+
+    .list{
+      margin: 0; padding-left: 18px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    /* Featured repos */
+    .repo-grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .repo{
+      grid-column: span 6;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.045);
+      padding: 14px 14px 12px;
+      position:relative;
+      overflow:hidden;
+    }
+    .repo::before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(700px 200px at 20% 0%, rgba(34,211,238,.12), transparent 55%);
+      pointer-events:none;
+    }
+    .repo .in{position:relative}
+    .repo .top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px;}
+    .repo h3{margin:0 0 6px; font-size:14.5px; letter-spacing:.2px}
+    .repo p{margin:0; color:var(--muted); font-size: 13px; line-height:1.5}
+    .repo .meta{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; color:var(--muted2); font-size:12.5px; font-family:var(--mono)}
+    .repo .badge{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.14);
+      padding: 5px 8px;
+      border-radius: 999px;
+    }
+    @media (max-width: 900px){ .repo{grid-column: span 12;} }
+
+    /* Timeline */
+    .timeline{
+      position:relative;
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:6px; top:0; bottom:0;
+      width:2px;
+      background: linear-gradient(180deg, rgba(124,92,255,.55), rgba(34,211,238,.35), rgba(52,211,153,.25));
+      opacity:.9;
+      border-radius:2px;
+    }
+    .t-item{
+      position:relative;
+      padding: 14px 14px 12px;
+      margin: 0 0 12px 0;
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.045);
+    }
+    .t-item::before{
+      content:"";
+      position:absolute;
+      left:-18px; top:18px;
+      width:12px; height:12px;
+      border-radius:999px;
+      background: rgba(34,211,238,.85);
+      box-shadow: 0 0 0 6px rgba(34,211,238,.12);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .t-top{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+      margin-bottom: 6px;
+    }
+    .t-role{font-weight:750; letter-spacing:.2px}
+    .t-co{color:var(--muted); font-size:13.5px}
+    .t-dates{font-family:var(--mono); font-size:12px; color:var(--muted2); white-space:nowrap}
+    .t-notes{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
+    .t-tags{margin-top:10px}
+
+    footer{
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color: var(--muted2);
+      font-size: 13px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .small{font-size:12.5px; color:var(--muted2)}
+    .mono{font-family: var(--mono)}
+
+    /* tiny status line */
+    .status-line{
+      margin-top:10px;
+      font-family: var(--mono);
+      color: rgba(255,255,255,.65);
+      font-size: 12px;
+    }
+    .status-line .ok{color: rgba(52,211,153,.92)}
+    .status-line .warn{color: rgba(251,191,36,.92)}
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="t1">Abhishek Dixit</div>
+          <div class="t2">Platform Engineer • .NET • Azure • Kubernetes</div>
+        </div>
+      </div>
+
+      <div class="links">
+        <a class="pill" href="#projects">Projects</a>
+        <a class="pill" href="#ai">AI Artifacts</a>
+        <a class="pill" href="#featured">Featured Repos</a>
+        <a class="pill" href="#timeline">Experience</a>
+        <a class="pill" href="#skills">Skills</a>
+        <a class="pill" href="#contact-section">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="card">
+        <div class="in">
+          <div class="kicker"><span class="dot"></span><span class="mono">Available for Senior / Staff roles • US/Eastern friendly</span></div>
+
+          <h1>Cloud-native engineer building <span style="color:rgba(34,211,238,.95)">reliable platforms</span> & <span style="color:rgba(124,92,255,.98)">production AI systems</span>.</h1>
+
+          <p class="sub">
+            I build scalable full-stack and microservice systems using <b>.NET (C#)</b>, <b>Python (Django)</b>, and <b>React</b>,
+            shipped with strong DevOps and Kubernetes practices on <b>Azure</b> (AKS, Functions, Storage, Key Vault, CI/CD).
+          </p>
+
+          <div class="btn-row">
+            <a class="btn primary" href="./abhishekResume9jan.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/dixitabhishek63/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="https://github.com/dixitabhishek63" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+
+          <div class="grid">
+            <div class="mini span-6">
+              <h3>What I’m strongest at</h3>
+              <p>Platform + DevOps engineering, Kubernetes on AKS, infra automation (Terraform/ARM), and building APIs/dashboards with .NET/Python/React.</p>
+            </div>
+            <div class="mini span-6">
+              <h3>What I’m building now</h3>
+              <p>Portfolio-grade AI artifacts: offline RAG, self-healing coding agents, low-latency voice servers, fine-tuning pipelines, and event-driven agent orchestration.</p>
+            </div>
+            <div class="mini span-12">
+              <h3>Quick highlights</h3>
+              <p class="mono">AKS • Helm • Docker • Terraform • Azure DevOps • .NET • Python • React • GraphQL • Observability • Production support</p>
+            </div>
+          </div>
+
+          <div class="status-line" id="gh-status">
+            GitHub status: <span class="warn">loading…</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Card -->
+      <div class="card">
+        <div class="in">
+          <h2 style="margin:0 0 10px">Snapshot</h2>
+          <p class="hint" style="margin:0 0 14px">
+            Full-stack + Platform Engineer with strong cloud-native delivery. Background in airlines + healthcare integrations.
+          </p>
+
+          <div class="mini" style="margin-bottom:12px">
+            <h3>Contact</h3>
+            <p class="mono" style="margin-bottom:10px">
+              Email: <a href="mailto:abhishekdxt3@gmail.com">abhishekdxt3@gmail.com</a><br/>
+              Phone: <a href="tel:+917982159904">+91-7982159904</a> / <a href="tel:+918377917948">+91-8377917948</a><br/>
+              LinkedIn: <a href="https://www.linkedin.com/in/dixitabhishek63/" target="_blank" rel="noreferrer">dixitabhishek63</a>
+            </p>
+            <div class="btn-row" style="margin-top:0">
+              <a class="btn" href="mailto:abhishekdxt3@gmail.com">Email me</a>
+              <a class="btn" href="https://www.linkedin.com/in/dixitabhishek63/" target="_blank" rel="noreferrer">Message on LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="mini">
+            <h3>Certifications</h3>
+            <ul class="list">
+              <li>CKS • CKA • CKAD</li>
+              <li>Microsoft Azure Administrator Associate</li>
+              <li>Microsoft DevOps Engineer Expert</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Selected engineering projects (from my work)</h2>
+      <p class="hint">A mix of cloud platforms, integrations, and high-throughput systems. Some client URLs are not shareable due to compliance.</p>
+
+      <div class="cards">
+        <article class="proj">
+          <div class="in">
+            <h3>CrossWalk — Analytics APIs (GraphQL + REST)</h3>
+            <p>Built APIs to serve SQL Server data via GraphQL + REST for dashboards; also provided DevOps support (Azure App Services) and managed Helm + Terraform.</p>
+            <div class="tags">
+              <span class="tag a">.NET</span><span class="tag b">Node.js</span><span class="tag c">GraphQL</span><span class="tag">SQL Server</span><span class="tag">Azure</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>Volaris Airlines — Booking platform modernization</h3>
+            <p>Ported an airline ticket booking platform to Angular + .NET Core with containerized deployments (Docker) and Helm-based Kubernetes delivery; also supported AWS services.</p>
+            <div class="tags">
+              <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Helm / K8s</span><span class="tag w">AWS</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>Spirit Airlines — mCabin scheduling + seatmap GUI</h3>
+            <p>Built .NET Core APIs and containerized services, optimized Kubernetes scaling based on pending requests, and supported workflow delivery to enable crew scheduling operations.</p>
+            <div class="tags">
+              <span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Kubernetes</span><span class="tag w">Autoscaling</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>Phase 10 — Healthcare EHR integration (SAML + HL7/FHIR)</h3>
+            <p>Built Angular + .NET Core modules to connect to EHR providers (EPIC / AthenaHealth), implemented SAML auth, and supported HL7/FHIR compliant workflows for patient trials.</p>
+            <div class="tags">
+              <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag">EHR</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>Airmaster — Quotation + Invoice tool (Web & Mobile)</h3>
+            <p>Built Angular + ASP.NET WebAPI modules backed by SQL Server with reporting and PDF generation, supporting quote management and invoicing workflows.</p>
+            <div class="tags">
+              <span class="tag a">Angular</span><span class="tag">ASP.NET WebAPI</span><span class="tag">SQL Server</span><span class="tag b">Reporting</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>Platform Engineering — AKS + CI/CD + Infra Automation</h3>
+            <p>Delivered microservices deployments on AKS with Helm/Docker, automated infra provisioning with Terraform/ARM, and supported production reliability and incident response.</p>
+            <div class="tags">
+              <span class="tag c">AKS</span><span class="tag">Helm</span><span class="tag b">Docker</span><span class="tag">Terraform</span><span class="tag">Azure DevOps</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- AI Work -->
+    <section id="ai" class="section">
+      <h2>AI engineering artifacts (production-grade builds)</h2>
+      <p class="hint">No 404: repo links auto-hide until the repo exists.</p>
+
+      <div class="cards">
+        <!-- Each AI card: set data-repo="repo-name" and the link will show only if repo exists -->
+        <article class="proj" data-repo="neural-vault">
+          <div class="in">
+            <h3>Neural Vault — Offline-first RAG with quantized SLMs</h3>
+            <p>Desktop app that chats with sensitive docs completely offline: GGUF quantization, local vector store, and RAM-aware model loading.</p>
+            <div class="tags">
+              <span class="tag a">llama.cpp</span><span class="tag">GGUF 4-bit</span><span class="tag b">ChromaDB</span><span class="tag c">Streamlit</span><span class="tag">Python</span>
+            </div>
+            <p class="small repo-link" style="display:none">
+              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="proj" data-repo="devfix-auto-agent">
+          <div class="in">
+            <h3>DevFix Auto-Agent — Self-healing coding agent</h3>
+            <p>CLI loop that writes code, runs tests, reads error logs, and iteratively fixes itself using stateful agentic graphs + sandboxed Docker execution.</p>
+            <div class="tags">
+              <span class="tag a">LangGraph</span><span class="tag b">Docker SDK</span><span class="tag">PyTest</span><span class="tag c">AST</span><span class="tag w">Reflection</span>
+            </div>
+            <p class="small repo-link" style="display:none">
+              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="proj" data-repo="echo-negotiator">
+          <div class="in">
+            <h3>Echo Negotiator — Full-duplex voice AI &lt; 500ms</h3>
+            <p>Low-latency voice-to-voice server using WebSockets, VAD interruption handling, and streaming STT → LLM → TTS with AsyncIO concurrency.</p>
+            <div class="tags">
+              <span class="tag a">FastAPI</span><span class="tag">WebSockets</span><span class="tag b">Silero VAD</span><span class="tag c">Deepgram</span><span class="tag w">Realtime</span>
+            </div>
+            <p class="small repo-link" style="display:none">
+              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="proj" data-repo="model-smith">
+          <div class="in">
+            <h3>Model Smith — Synthetic data + PEFT fine-tuning</h3>
+            <p>Pipeline to fine-tune a small model with LoRA/QLoRA, generate synthetic datasets, and evaluate with automated judge benchmarks + RAGAS.</p>
+            <div class="tags">
+              <span class="tag a">Unsloth</span><span class="tag b">HuggingFace TRL</span><span class="tag">LoRA/QLoRA</span><span class="tag c">W&amp;B</span><span class="tag w">Ragas</span>
+            </div>
+            <p class="small repo-link" style="display:none">
+              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="proj" data-repo="nexus-flow">
+          <div class="in">
+            <h3>Nexus Flow — Event-driven multi-agent workflows + HITL</h3>
+            <p>Backend orchestration that reacts to Slack/Jira events, routes tasks to specialized agents, and pauses for human approvals with persisted state in Postgres.</p>
+            <div class="tags">
+              <span class="tag a">LangGraph</span><span class="tag">PostgreSQL</span><span class="tag b">Webhooks</span><span class="tag c">Slack API</span><span class="tag w">Human-in-loop</span>
+            </div>
+            <p class="small repo-link" style="display:none">
+              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="proj" data-repo="alter-ego">
+          <div class="in">
+            <h3>Alter Ego — Hybrid memory (Vector + Graph)</h3>
+            <p>Digital twin memory system using GraphRAG + vector search, recursive summarization, and style transfer to mimic writing tone over time.</p>
+            <div class="tags">
+              <span class="tag a">Neo4j</span><span class="tag">NetworkX</span><span class="tag b">LangChain</span><span class="tag c">Hybrid Retrieval</span><span class="tag w">Cryptography</span>
+            </div>
+            <p class="small repo-link" style="display:none">
+              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="mini" style="margin-top:14px">
+        <h3>Reference</h3>
+        <p class="small">Artifact list inspired by: <span class="mono">masterdexter.io/ai-engineer-hq</span></p>
+      </div>
+    </section>
+
+    <!-- Featured Repos -->
+    <section id="featured" class="section">
+      <h2>Featured repositories</h2>
+      <p class="hint">
+        Loaded live from GitHub API (no backend). First it tries preferred repos (AI artifacts), then falls back to most-starred / recently updated.
+      </p>
+
+      <div class="mini" style="margin-bottom:12px">
+        <h3 style="margin-bottom:6px">Live GitHub</h3>
+        <p class="small">
+          Profile: <a class="mono" href="https://github.com/dixitabhishek63" target="_blank" rel="noreferrer">github.com/dixitabhishek63</a>
+          • API: <span class="mono">api.github.com</span>
+        </p>
+      </div>
+
+      <div class="repo-grid" id="repo-grid">
+        <!-- JS fills this -->
+      </div>
+
+      <div class="status-line" id="repo-status" style="margin-top:10px">
+        Featured repos: <span class="warn">loading…</span>
+      </div>
+    </section>
+
+    <!-- Experience timeline -->
+    <section id="timeline" class="section">
+      <h2>Experience timeline</h2>
+      <p class="hint">Clean recruiter-friendly chronology (your resume dates).</p>
+
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-top">
+            <div>
+              <div class="t-role">Platform Engineer (.NET & Azure DevOps)</div>
+              <div class="t-co">Builder AI (Engineer AI Service India Pvt Ltd)</div>
+            </div>
+            <div class="t-dates">May 10, 2023 — Present</div>
+          </div>
+          <p class="t-notes">Platform + DevOps: Azure, AKS, Helm, Terraform/ARM, CI/CD, production support, reliability, automation.</p>
+          <div class="tags t-tags">
+            <span class="tag c">AKS</span><span class="tag">Azure DevOps</span><span class="tag b">Terraform/ARM</span><span class="tag">Helm/Docker</span><span class="tag a">.NET</span>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-top">
+            <div>
+              <div class="t-role">Senior Engineer (Cloud & Data Tech)</div>
+              <div class="t-co">Fractal Analytics</div>
+            </div>
+            <div class="t-dates">Mar 23, 2022 — Feb 28, 2023</div>
+          </div>
+          <p class="t-notes">DevOps + cloud automation across AWS/Azure; microservices support; CI/CD; healthcare integrations.</p>
+          <div class="tags t-tags">
+            <span class="tag">Azure</span><span class="tag w">AWS</span><span class="tag">CI/CD</span><span class="tag b">Terraform/ARM</span><span class="tag c">Kubernetes/Helm</span>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-top">
+            <div>
+              <div class="t-role">Team Lead (Fullstack Engineer)</div>
+              <div class="t-co">Double Edge Consulting (BCS Technology Ltd.)</div>
+            </div>
+            <div class="t-dates">Jun 10, 2019 — Dec 21, 2021</div>
+          </div>
+          <p class="t-notes">Airlines domain: booking & seat management, microservices, Angular modules, DevOps support, delivery leadership.</p>
+          <div class="tags t-tags">
+            <span class="tag a">Angular</span><span class="tag a">.NET</span><span class="tag b">Docker</span><span class="tag c">Helm/K8s</span><span class="tag">Microservices</span>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-top">
+            <div>
+              <div class="t-role">Senior Software Engineer (Cloud)</div>
+              <div class="t-co">Datasoft Technologies</div>
+            </div>
+            <div class="t-dates">Aug 12, 2018 — Jun 8, 2019</div>
+          </div>
+          <p class="t-notes">Healthcare/EHR integration: EPIC + AthenaHealth; SAML; HL7/FHIR; HIPAA compliance; fullstack delivery.</p>
+          <div class="tags t-tags">
+            <span class="tag">EHR</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag a">.NET Core</span><span class="tag a">React/Angular</span>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-top">
+            <div>
+              <div class="t-role">Web Developer (.NET + MEAN/MERN, Azure, Linux)</div>
+              <div class="t-co">Eudemonic Technologies Pvt. Ltd.</div>
+            </div>
+            <div class="t-dates">May 22, 2017 — Aug 3, 2018</div>
+          </div>
+          <p class="t-notes">Fullstack web apps using Angular + Node/.NET; SQL Server; Azure-hosted workflows; migrations and tooling.</p>
+          <div class="tags t-tags">
+            <span class="tag a">Angular</span><span class="tag">Node/.NET</span><span class="tag">SQL Server</span><span class="tag">Azure</span><span class="tag b">Linux</span>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-top">
+            <div>
+              <div class="t-role">Software Developer</div>
+              <div class="t-co">Orbitsys Technologies</div>
+            </div>
+            <div class="t-dates">Aug 16, 2016 — Mar 17, 2017</div>
+          </div>
+          <p class="t-notes">ASP.NET MVC + VBScript; legacy modernization; web UI from mockups.</p>
+          <div class="tags t-tags">
+            <span class="tag a">ASP.NET MVC</span><span class="tag">VBScript</span><span class="tag">Modernization</span>
+          </div>
+        </div>
+
+        <div class="t-item" style="margin-bottom:0">
+          <div class="t-top">
+            <div>
+              <div class="t-role">Software Engineer (.NET)</div>
+              <div class="t-co">Process Nine Technologies Pvt. Ltd.</div>
+            </div>
+            <div class="t-dates">Dec 11, 2013 — Jul 29, 2016</div>
+          </div>
+          <p class="t-notes">ASP.NET MVC and .NET Framework websites/APIs; foundational engineering.</p>
+          <div class="tags t-tags">
+            <span class="tag a">.NET Framework</span><span class="tag a">ASP.NET MVC</span><span class="tag">Web APIs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <p class="hint">Optimized for platform engineering + cloud-native delivery (Azure/AWS) and production-grade backend systems.</p>
+
+      <div class="two-col">
+        <div class="mini">
+          <h3>Core engineering</h3>
+          <ul class="list">
+            <li>.NET / .NET Core • C# • REST APIs • GraphQL</li>
+            <li>Python (Django / DRF) • Node.js • Go (automation)</li>
+            <li>React • Angular • TypeScript</li>
+            <li>SQL Server • Data integration (Healthcare/EHR, Airlines)</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <h3>Cloud / DevOps</h3>
+          <ul class="list">
+            <li>Azure: AKS, App Services, Functions, Storage, Key Vault</li>
+            <li>Kubernetes: Helm, Docker, deployments, incident support</li>
+            <li>IaC: Terraform, ARM, Ansible</li>
+            <li>CI/CD: Azure DevOps, Jenkins • Observability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" aria-label="contact">
+      <div class="mini" id="contact-section" style="margin-top:12px">
+        <h3>Let’s connect</h3>
+        <p class="small">
+          Email: <a class="mono" href="mailto:abhishekdxt3@gmail.com">abhishekdxt3@gmail.com</a> •
+          LinkedIn: <a class="mono" href="https://www.linkedin.com/in/dixitabhishek63/" target="_blank" rel="noreferrer">dixitabhishek63</a> •
+          GitHub: <a class="mono" href="https://github.com/dixitabhishek63" target="_blank" rel="noreferrer">dixitabhishek63</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="yr"></span> Abhishek Dixit • Built for GitHub Pages</div>
+      <div class="small">Single-file <span class="mono">index.html</span> • No frameworks • Fast load</div>
+    </footer>
+  </main>
+
+  <script>
+    // ===== Config =====
+    const GH_USER = "dixitabhishek63";
+
+    // Preferred repos to feature first (if exist), then fallback
+    const PREFERRED_REPOS = [
+      "neural-vault",
+      "devfix-auto-agent",
+      "echo-negotiator",
+      "model-smith",
+      "nexus-flow",
+      "alter-ego"
+    ];
+
+    // ===== Utilities =====
+    const fmtNum = (n) => (typeof n === "number" ? n.toLocaleString() : "0");
+    const ago = (iso) => {
+      if (!iso) return "";
+      const d = new Date(iso);
+      const diff = Date.now() - d.getTime();
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      if (days < 1) return "today";
+      if (days === 1) return "1 day ago";
+      if (days < 30) return `${days} days ago`;
+      const months = Math.floor(days / 30);
+      if (months === 1) return "1 month ago";
+      if (months < 12) return `${months} months ago`;
+      const years = Math.floor(months / 12);
+      return years === 1 ? "1 year ago" : `${years} years ago`;
+    };
+
+    function setStatus(el, html) {
+      if (!el) return;
+      el.innerHTML = html;
+    }
+
+    // ===== 1) AI cards: show repo link only if repo exists =====
+    async function wireAiRepoLinks() {
+      const cards = Array.from(document.querySelectorAll('article.proj[data-repo]'));
+      let ok = 0, miss = 0;
+
+      await Promise.all(cards.map(async (card) => {
+        const repo = card.getAttribute("data-repo");
+        const linkWrap = card.querySelector(".repo-link");
+        const linkEl = card.querySelector("[data-repo-link]");
+        if (!repo || !linkWrap || !linkEl) return;
+
+        const api = `https://api.github.com/repos/${GH_USER}/${repo}`;
+        try {
+          const res = await fetch(api, { headers: { "Accept": "application/vnd.github+json" }});
+          if (!res.ok) { miss++; linkWrap.style.display = "none"; return; }
+          const data = await res.json();
+          const htmlUrl = data.html_url || `https://github.com/${GH_USER}/${repo}`;
+          linkEl.href = htmlUrl;
+          linkEl.textContent = `${GH_USER}/${repo}`;
+          linkWrap.style.display = "block";
+          ok++;
+        } catch {
+          miss++;
+          linkWrap.style.display = "none";
+        }
+      }));
+
+      const ghStatus = document.getElementById("gh-status");
+      setStatus(
+        ghStatus,
+        `GitHub status: <span class="ok">ok</span> • AI repos found: <span class="ok">${ok}</span> • hidden (not created yet): <span class="warn">${miss}</span>`
+      );
+    }
+
+    // ===== 2) Featured repos section (GitHub API, no backend) =====
+    function repoCard(repo) {
+      const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 5) : [];
+      const safeDesc = (repo.description || "").trim() || "No description yet.";
+      const stars = fmtNum(repo.stargazers_count);
+      const forks = fmtNum(repo.forks_count);
+      const lang = repo.language || "—";
+      const updated = ago(repo.updated_at);
+
+      const topicBadges = topics.map(t => `<span class="badge">${t}</span>`).join("");
+
+      return `
+        <article class="repo">
+          <div class="in">
+            <div class="top">
+              <div>
+                <h3><a href="${repo.html_url}" target="_blank" rel="noreferrer">${repo.name}</a></h3>
+                <p>${safeDesc}</p>
+              </div>
+              <div class="badge" title="Primary language">${lang}</div>
+            </div>
+            <div class="meta">
+              <span class="badge">★ ${stars}</span>
+              <span class="badge">⑂ ${forks}</span>
+              <span class="badge">updated ${updated}</span>
+              ${topicBadges}
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    async function loadFeaturedRepos() {
+      const grid = document.getElementById("repo-grid");
+      const status = document.getElementById("repo-status");
+
+      try {
+        // Ask for topics too (works for public repos; some accounts may still return empty topics)
+        const res = await fetch(`https://api.github.com/users/${GH_USER}/repos?per_page=100&sort=updated`, {
+          headers: {
+            "Accept": "application/vnd.github+json"
+          }
+        });
+
+        if (!res.ok) throw new Error("GitHub API error");
+        const repos = await res.json();
+
+        const byName = new Map(repos.map(r => [r.name, r]));
+        const preferred = PREFERRED_REPOS.map(n => byName.get(n)).filter(Boolean);
+
+        // Fallback pool: most starred then recently updated
+        const fallback = repos
+          .filter(r => !PREFERRED_REPOS.includes(r.name))
+          .sort((a,b) => (b.stargazers_count - a.stargazers_count) || (new Date(b.updated_at) - new Date(a.updated_at)));
+
+        const picks = [...preferred, ...fallback].slice(0, 6);
+
+        if (!picks.length) {
+          grid.innerHTML = `<div class="mini span-12"><h3>No public repos found</h3><p class="small">Create public repos to show them here.</p></div>`;
+          setStatus(status, `Featured repos: <span class="warn">none</span>`);
+          return;
+        }
+
+        grid.innerHTML = picks.map(repoCard).join("");
+        setStatus(status, `Featured repos: <span class="ok">loaded</span> • showing <span class="ok">${picks.length}</span>`);
+      } catch (e) {
+        grid.innerHTML = `
+          <div class="mini" style="grid-column: span 12">
+            <h3>Couldn’t load repos right now</h3>
+            <p class="small">GitHub API may be rate-limited. Refresh later, or the section will populate automatically.</p>
+          </div>
+        `;
+        setStatus(status, `Featured repos: <span class="warn">API unavailable / rate-limited</span>`);
+      }
+    }
+
+    // ===== Boot =====
+    document.getElementById("yr").textContent = new Date().getFullYear();
+    wireAiRepoLinks();
+    loadFeaturedRepos();
+  </script>
+</body>
+</html>

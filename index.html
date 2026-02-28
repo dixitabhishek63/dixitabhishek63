@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b1220" />
-  <meta name="description" content="Abhishek Dixit — Platform Engineer (.NET / Azure / Kubernetes) building cloud-native systems and production AI artifacts." />
+  <meta name="description" content="Abhishek Dixit — Platform Engineer (.NET / Azure / Kubernetes) focused on cloud delivery, reliability, and automation." />
   <title>Abhishek Dixit — Portfolio</title>
 
   <style>
@@ -12,7 +12,6 @@
       --bg0:#070a12;
       --bg1:#0b1220;
       --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
       --stroke: rgba(255,255,255,.10);
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.72);
@@ -37,17 +36,17 @@
       font-family: var(--sans);
       color:var(--text);
       background:
-        radial-gradient(1200px 700px at 10% 0%, rgba(124,92,255,.26), transparent 55%),
-        radial-gradient(900px 600px at 100% 10%, rgba(34,211,238,.20), transparent 50%),
-        radial-gradient(900px 500px at 50% 110%, rgba(52,211,153,.12), transparent 60%),
+        radial-gradient(1200px 700px at 10% 0%, rgba(124,92,255,.22), transparent 55%),
+        radial-gradient(900px 600px at 100% 10%, rgba(34,211,238,.18), transparent 50%),
+        radial-gradient(900px 500px at 50% 110%, rgba(52,211,153,.10), transparent 60%),
         linear-gradient(180deg, var(--bg0), var(--bg1));
       overflow-x:hidden;
     }
 
     a{color:inherit;text-decoration:none}
     a:hover{opacity:.95}
-
     .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px}
+
     .nav{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
@@ -113,7 +112,7 @@
       content:"";
       position:absolute; inset:-2px;
       background: radial-gradient(800px 220px at 20% 0%, rgba(124,92,255,.20), transparent 55%),
-                  radial-gradient(600px 220px at 80% 0%, rgba(34,211,238,.18), transparent 60%);
+                  radial-gradient(600px 220px at 80% 0%, rgba(34,211,238,.16), transparent 60%);
       pointer-events:none;
       opacity:.9;
     }
@@ -138,16 +137,14 @@
       line-height: 1.05;
       letter-spacing: -0.8px;
     }
-    @media (max-width: 520px){
-      h1{font-size: 36px;}
-    }
+    @media (max-width: 520px){ h1{font-size: 36px;} }
 
     .sub{
       color: var(--muted);
       font-size: 15.5px;
       line-height: 1.55;
       margin: 0 0 16px;
-      max-width: 62ch;
+      max-width: 64ch;
     }
 
     .btn-row{display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;}
@@ -176,9 +173,7 @@
     }
     .span-6{grid-column: span 6}
     .span-12{grid-column: span 12}
-    @media (max-width: 900px){
-      .span-6{grid-column: span 12}
-    }
+    @media (max-width: 900px){ .span-6{grid-column: span 12} }
 
     .mini{
       border-radius: var(--radius2);
@@ -233,16 +228,6 @@
     .tag.b{border-color: rgba(34,211,238,.28); background: rgba(34,211,238,.08)}
     .tag.c{border-color: rgba(52,211,153,.26); background: rgba(52,211,153,.08)}
     .tag.w{border-color: rgba(251,191,36,.24); background: rgba(251,191,36,.08)}
-
-    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
-    @media (max-width: 900px){ .two-col{grid-template-columns:1fr;} }
-
-    .list{
-      margin: 0; padding-left: 18px;
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.6;
-    }
 
     /* Featured repos */
     .repo-grid{
@@ -311,10 +296,7 @@
       box-shadow: 0 0 0 6px rgba(34,211,238,.12);
       border:1px solid rgba(255,255,255,.18);
     }
-    .t-top{
-      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
-      margin-bottom: 6px;
-    }
+    .t-top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px;}
     .t-role{font-weight:750; letter-spacing:.2px}
     .t-co{color:var(--muted); font-size:13.5px}
     .t-dates{font-family:var(--mono); font-size:12px; color:var(--muted2); white-space:nowrap}
@@ -336,7 +318,6 @@
     .small{font-size:12.5px; color:var(--muted2)}
     .mono{font-family: var(--mono)}
 
-    /* tiny status line */
     .status-line{
       margin-top:10px;
       font-family: var(--mono);
@@ -361,8 +342,8 @@
 
       <div class="links">
         <a class="pill" href="#projects">Projects</a>
-        <a class="pill" href="#ai">AI Artifacts</a>
-        <a class="pill" href="#featured">Featured Repos</a>
+        <a class="pill" href="#ai">AI Work</a>
+        <a class="pill" href="#featured">Open-source</a>
         <a class="pill" href="#timeline">Experience</a>
         <a class="pill" href="#skills">Skills</a>
         <a class="pill" href="#contact-section">Contact</a>
@@ -371,17 +352,20 @@
   </div>
 
   <main class="wrap">
-    <!-- Hero -->
     <section class="hero">
       <div class="card">
         <div class="in">
-          <div class="kicker"><span class="dot"></span><span class="mono">Available for Senior / Staff roles • US/Eastern friendly</span></div>
+          <div class="kicker"><span class="dot"></span><span class="mono">Senior / Staff ready • US/Eastern overlap</span></div>
 
-          <h1>Cloud-native engineer building <span style="color:rgba(34,211,238,.95)">reliable platforms</span> & <span style="color:rgba(124,92,255,.98)">production AI systems</span>.</h1>
+          <h1>
+            I build <span style="color:rgba(34,211,238,.95)">reliable cloud platforms</span> and ship
+            <span style="color:rgba(124,92,255,.98)">production-grade services</span>.
+          </h1>
 
           <p class="sub">
-            I build scalable full-stack and microservice systems using <b>.NET (C#)</b>, <b>Python (Django)</b>, and <b>React</b>,
-            shipped with strong DevOps and Kubernetes practices on <b>Azure</b> (AKS, Functions, Storage, Key Vault, CI/CD).
+            Platform & full-stack engineer with 13+ years across airlines and healthcare.
+            Strong in <b>.NET</b>, <b>Azure</b>, <b>AKS/Kubernetes</b>, <b>CI/CD</b>, and <b>automation</b>.
+            I like making deployments boring: predictable, observable, and easy to operate.
           </p>
 
           <div class="btn-row">
@@ -392,31 +376,28 @@
 
           <div class="grid">
             <div class="mini span-6">
-              <h3>What I’m strongest at</h3>
-              <p>Platform + DevOps engineering, Kubernetes on AKS, infra automation (Terraform/ARM), and building APIs/dashboards with .NET/Python/React.</p>
+              <h3>Where I add value fast</h3>
+              <p>AKS delivery, Helm deployments, Azure DevOps pipelines, identity/secrets, storage, troubleshooting, and simplifying production operations.</p>
             </div>
             <div class="mini span-6">
-              <h3>What I’m building now</h3>
-              <p>Portfolio-grade AI artifacts: offline RAG, self-healing coding agents, low-latency voice servers, fine-tuning pipelines, and event-driven agent orchestration.</p>
+              <h3>Currently exploring</h3>
+              <p>Practical AI engineering patterns (offline RAG, agent loops, streaming voice). Building these as side projects with real constraints: latency, safety, and cost.</p>
             </div>
             <div class="mini span-12">
-              <h3>Quick highlights</h3>
-              <p class="mono">AKS • Helm • Docker • Terraform • Azure DevOps • .NET • Python • React • GraphQL • Observability • Production support</p>
+              <h3>Toolbox</h3>
+              <p class="mono">AKS • Helm • Docker • Terraform/ARM • Azure DevOps • .NET • Python • React • GraphQL • SQL Server • Observability</p>
             </div>
           </div>
 
-          <div class="status-line" id="gh-status">
-            GitHub status: <span class="warn">loading…</span>
-          </div>
+          <div class="status-line" id="gh-status">GitHub: <span class="warn">loading…</span></div>
         </div>
       </div>
 
-      <!-- Side Card -->
       <div class="card">
         <div class="in">
           <h2 style="margin:0 0 10px">Snapshot</h2>
           <p class="hint" style="margin:0 0 14px">
-            Full-stack + Platform Engineer with strong cloud-native delivery. Background in airlines + healthcare integrations.
+            Hands-on platform engineer with strong delivery ownership (build → deploy → operate). Airlines + healthcare integrations.
           </p>
 
           <div class="mini" style="margin-bottom:12px">
@@ -444,194 +425,142 @@
       </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects" class="section">
-      <h2>Selected engineering projects (from my work)</h2>
-      <p class="hint">A mix of cloud platforms, integrations, and high-throughput systems. Some client URLs are not shareable due to compliance.</p>
+      <h2>Selected engineering projects</h2>
+      <p class="hint">These are real work projects (client URLs may be private due to compliance).</p>
 
       <div class="cards">
-        <article class="proj">
-          <div class="in">
-            <h3>CrossWalk — Analytics APIs (GraphQL + REST)</h3>
-            <p>Built APIs to serve SQL Server data via GraphQL + REST for dashboards; also provided DevOps support (Azure App Services) and managed Helm + Terraform.</p>
-            <div class="tags">
-              <span class="tag a">.NET</span><span class="tag b">Node.js</span><span class="tag c">GraphQL</span><span class="tag">SQL Server</span><span class="tag">Azure</span>
-            </div>
+        <article class="proj"><div class="in">
+          <h3>CrossWalk — Analytics APIs (GraphQL + REST)</h3>
+          <p>Built APIs serving SQL Server data via GraphQL + REST for dashboards; supported delivery + DevOps (Azure, pipelines, deployments).</p>
+          <div class="tags">
+            <span class="tag a">.NET</span><span class="tag b">Node.js</span><span class="tag c">GraphQL</span><span class="tag">SQL Server</span><span class="tag">Azure</span>
           </div>
-        </article>
+        </div></article>
 
-        <article class="proj">
-          <div class="in">
-            <h3>Volaris Airlines — Booking platform modernization</h3>
-            <p>Ported an airline ticket booking platform to Angular + .NET Core with containerized deployments (Docker) and Helm-based Kubernetes delivery; also supported AWS services.</p>
-            <div class="tags">
-              <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Helm / K8s</span><span class="tag w">AWS</span>
-            </div>
+        <article class="proj"><div class="in">
+          <h3>Volaris Airlines — Booking platform modernization</h3>
+          <p>Modernized booking flows with Angular + .NET Core, containerized delivery, and Helm-based Kubernetes deployments; supported AWS services.</p>
+          <div class="tags">
+            <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Helm / K8s</span><span class="tag w">AWS</span>
           </div>
-        </article>
+        </div></article>
 
-        <article class="proj">
-          <div class="in">
-            <h3>Spirit Airlines — mCabin scheduling + seatmap GUI</h3>
-            <p>Built .NET Core APIs and containerized services, optimized Kubernetes scaling based on pending requests, and supported workflow delivery to enable crew scheduling operations.</p>
-            <div class="tags">
-              <span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Kubernetes</span><span class="tag w">Autoscaling</span>
-            </div>
+        <article class="proj"><div class="in">
+          <h3>Spirit Airlines — mCabin scheduling + seatmap GUI</h3>
+          <p>Built .NET Core services and improved Kubernetes scaling decisions based on request backlog; supported operational workflows.</p>
+          <div class="tags">
+            <span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Kubernetes</span><span class="tag w">Autoscaling</span>
           </div>
-        </article>
+        </div></article>
 
-        <article class="proj">
-          <div class="in">
-            <h3>Phase 10 — Healthcare EHR integration (SAML + HL7/FHIR)</h3>
-            <p>Built Angular + .NET Core modules to connect to EHR providers (EPIC / AthenaHealth), implemented SAML auth, and supported HL7/FHIR compliant workflows for patient trials.</p>
-            <div class="tags">
-              <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag">EHR</span>
-            </div>
+        <article class="proj"><div class="in">
+          <h3>Phase 10 — Healthcare EHR integration (SAML + HL7/FHIR)</h3>
+          <p>Integrated with EPIC/AthenaHealth, implemented SAML auth, and supported HL7/FHIR compliant workflows for clinical systems.</p>
+          <div class="tags">
+            <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag">EHR</span>
           </div>
-        </article>
+        </div></article>
 
-        <article class="proj">
-          <div class="in">
-            <h3>Airmaster — Quotation + Invoice tool (Web & Mobile)</h3>
-            <p>Built Angular + ASP.NET WebAPI modules backed by SQL Server with reporting and PDF generation, supporting quote management and invoicing workflows.</p>
-            <div class="tags">
-              <span class="tag a">Angular</span><span class="tag">ASP.NET WebAPI</span><span class="tag">SQL Server</span><span class="tag b">Reporting</span>
-            </div>
+        <article class="proj"><div class="in">
+          <h3>Airmaster — Quotation + Invoice tool</h3>
+          <p>Built quotation & invoicing modules with Angular + ASP.NET WebAPI, SQL Server reporting, and PDF generation.</p>
+          <div class="tags">
+            <span class="tag a">Angular</span><span class="tag">ASP.NET WebAPI</span><span class="tag">SQL Server</span><span class="tag b">Reporting</span>
           </div>
-        </article>
+        </div></article>
 
-        <article class="proj">
-          <div class="in">
-            <h3>Platform Engineering — AKS + CI/CD + Infra Automation</h3>
-            <p>Delivered microservices deployments on AKS with Helm/Docker, automated infra provisioning with Terraform/ARM, and supported production reliability and incident response.</p>
-            <div class="tags">
-              <span class="tag c">AKS</span><span class="tag">Helm</span><span class="tag b">Docker</span><span class="tag">Terraform</span><span class="tag">Azure DevOps</span>
-            </div>
+        <article class="proj"><div class="in">
+          <h3>Platform Engineering — AKS + CI/CD + Infra Automation</h3>
+          <p>Delivered microservices on AKS with Helm, automated infra with Terraform/ARM, and supported production reliability + incident response.</p>
+          <div class="tags">
+            <span class="tag c">AKS</span><span class="tag">Helm</span><span class="tag b">Docker</span><span class="tag">Terraform/ARM</span><span class="tag">Azure DevOps</span>
           </div>
-        </article>
+        </div></article>
       </div>
     </section>
 
-    <!-- AI Work -->
     <section id="ai" class="section">
-      <h2>AI engineering artifacts (production-grade builds)</h2>
-      <p class="hint">No 404: repo links auto-hide until the repo exists.</p>
+      <h2>AI work (side projects / in progress)</h2>
+      <p class="hint">
+        I’m building these in public with realistic constraints (offline, security, latency). Repo links appear only when the repo exists.
+      </p>
 
       <div class="cards">
-        <!-- Each AI card: set data-repo="repo-name" and the link will show only if repo exists -->
-        <article class="proj" data-repo="neural-vault">
-          <div class="in">
-            <h3>Neural Vault — Offline-first RAG with quantized SLMs</h3>
-            <p>Desktop app that chats with sensitive docs completely offline: GGUF quantization, local vector store, and RAM-aware model loading.</p>
-            <div class="tags">
-              <span class="tag a">llama.cpp</span><span class="tag">GGUF 4-bit</span><span class="tag b">ChromaDB</span><span class="tag c">Streamlit</span><span class="tag">Python</span>
-            </div>
-            <p class="small repo-link" style="display:none">
-              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
-            </p>
+        <article class="proj" data-repo="neural-vault"><div class="in">
+          <h3>Neural Vault — Offline document chat (RAG)</h3>
+          <p>Offline-first desktop concept: local embeddings + retrieval + quantized GGUF models. Goal: “no data leaves device”.</p>
+          <div class="tags">
+            <span class="tag a">llama.cpp</span><span class="tag b">ChromaDB</span><span class="tag c">Streamlit</span><span class="tag">GGUF</span>
           </div>
-        </article>
+          <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
+        </div></article>
 
-        <article class="proj" data-repo="devfix-auto-agent">
-          <div class="in">
-            <h3>DevFix Auto-Agent — Self-healing coding agent</h3>
-            <p>CLI loop that writes code, runs tests, reads error logs, and iteratively fixes itself using stateful agentic graphs + sandboxed Docker execution.</p>
-            <div class="tags">
-              <span class="tag a">LangGraph</span><span class="tag b">Docker SDK</span><span class="tag">PyTest</span><span class="tag c">AST</span><span class="tag w">Reflection</span>
-            </div>
-            <p class="small repo-link" style="display:none">
-              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
-            </p>
+        <article class="proj" data-repo="devfix-auto-agent"><div class="in">
+          <h3>DevFix Auto-Agent — Fixes code by running tests</h3>
+          <p>CLI loop that writes code, runs tests in a sandbox, reads failures, and retries. Focus: safe execution + stateful loops.</p>
+          <div class="tags">
+            <span class="tag a">LangGraph</span><span class="tag b">Docker</span><span class="tag c">PyTest</span><span class="tag">AST</span>
           </div>
-        </article>
+          <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
+        </div></article>
 
-        <article class="proj" data-repo="echo-negotiator">
-          <div class="in">
-            <h3>Echo Negotiator — Full-duplex voice AI &lt; 500ms</h3>
-            <p>Low-latency voice-to-voice server using WebSockets, VAD interruption handling, and streaming STT → LLM → TTS with AsyncIO concurrency.</p>
-            <div class="tags">
-              <span class="tag a">FastAPI</span><span class="tag">WebSockets</span><span class="tag b">Silero VAD</span><span class="tag c">Deepgram</span><span class="tag w">Realtime</span>
-            </div>
-            <p class="small repo-link" style="display:none">
-              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
-            </p>
+        <article class="proj" data-repo="echo-negotiator"><div class="in">
+          <h3>Echo Negotiator — Low-latency voice pipeline</h3>
+          <p>Streaming voice server using WebSockets + VAD. Goal: interruptible voice-to-voice with tight latency budgets.</p>
+          <div class="tags">
+            <span class="tag a">FastAPI</span><span class="tag b">WebSockets</span><span class="tag c">VAD</span><span class="tag">AsyncIO</span>
           </div>
-        </article>
+          <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
+        </div></article>
 
-        <article class="proj" data-repo="model-smith">
-          <div class="in">
-            <h3>Model Smith — Synthetic data + PEFT fine-tuning</h3>
-            <p>Pipeline to fine-tune a small model with LoRA/QLoRA, generate synthetic datasets, and evaluate with automated judge benchmarks + RAGAS.</p>
-            <div class="tags">
-              <span class="tag a">Unsloth</span><span class="tag b">HuggingFace TRL</span><span class="tag">LoRA/QLoRA</span><span class="tag c">W&amp;B</span><span class="tag w">Ragas</span>
-            </div>
-            <p class="small repo-link" style="display:none">
-              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
-            </p>
+        <article class="proj" data-repo="model-smith"><div class="in">
+          <h3>Model Smith — Fine-tuning experiments</h3>
+          <p>Pipeline experiments: synthetic data → LoRA/QLoRA → evaluation. Goal: learn the full loop cleanly, not hype results.</p>
+          <div class="tags">
+            <span class="tag a">TRL</span><span class="tag b">LoRA</span><span class="tag c">W&amp;B</span><span class="tag">RAGAS</span>
           </div>
-        </article>
+          <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
+        </div></article>
 
-        <article class="proj" data-repo="nexus-flow">
-          <div class="in">
-            <h3>Nexus Flow — Event-driven multi-agent workflows + HITL</h3>
-            <p>Backend orchestration that reacts to Slack/Jira events, routes tasks to specialized agents, and pauses for human approvals with persisted state in Postgres.</p>
-            <div class="tags">
-              <span class="tag a">LangGraph</span><span class="tag">PostgreSQL</span><span class="tag b">Webhooks</span><span class="tag c">Slack API</span><span class="tag w">Human-in-loop</span>
-            </div>
-            <p class="small repo-link" style="display:none">
-              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
-            </p>
+        <article class="proj" data-repo="nexus-flow"><div class="in">
+          <h3>Nexus Flow — Event-driven workflows</h3>
+          <p>Slack/Jira event triggers → agent routing → human approval gates. Goal: resumable workflows with persisted state.</p>
+          <div class="tags">
+            <span class="tag a">LangGraph</span><span class="tag b">PostgreSQL</span><span class="tag c">Webhooks</span><span class="tag">HITL</span>
           </div>
-        </article>
+          <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
+        </div></article>
 
-        <article class="proj" data-repo="alter-ego">
-          <div class="in">
-            <h3>Alter Ego — Hybrid memory (Vector + Graph)</h3>
-            <p>Digital twin memory system using GraphRAG + vector search, recursive summarization, and style transfer to mimic writing tone over time.</p>
-            <div class="tags">
-              <span class="tag a">Neo4j</span><span class="tag">NetworkX</span><span class="tag b">LangChain</span><span class="tag c">Hybrid Retrieval</span><span class="tag w">Cryptography</span>
-            </div>
-            <p class="small repo-link" style="display:none">
-              Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a>
-            </p>
+        <article class="proj" data-repo="alter-ego"><div class="in">
+          <h3>Alter Ego — Hybrid memory (Vector + Graph)</h3>
+          <p>Personal memory experiments: vector retrieval + graph relationships + summarization to keep context small and usable.</p>
+          <div class="tags">
+            <span class="tag a">Neo4j</span><span class="tag b">LangChain</span><span class="tag c">NetworkX</span><span class="tag">GraphRAG</span>
           </div>
-        </article>
+          <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
+        </div></article>
       </div>
 
       <div class="mini" style="margin-top:14px">
-        <h3>Reference</h3>
-        <p class="small">Artifact list inspired by: <span class="mono">masterdexter.io/ai-engineer-hq</span></p>
-      </div>
-    </section>
-
-    <!-- Featured Repos -->
-    <section id="featured" class="section">
-      <h2>Featured repositories</h2>
-      <p class="hint">
-        Loaded live from GitHub API (no backend). First it tries preferred repos (AI artifacts), then falls back to most-starred / recently updated.
-      </p>
-
-      <div class="mini" style="margin-bottom:12px">
-        <h3 style="margin-bottom:6px">Live GitHub</h3>
+        <h3>Note</h3>
         <p class="small">
-          Profile: <a class="mono" href="https://github.com/dixitabhishek63" target="_blank" rel="noreferrer">github.com/dixitabhishek63</a>
-          • API: <span class="mono">api.github.com</span>
+          These ideas were inspired by a public “AI Engineer HQ” style roadmap, but the implementations are mine and will be published progressively.
         </p>
       </div>
-
-      <div class="repo-grid" id="repo-grid">
-        <!-- JS fills this -->
-      </div>
-
-      <div class="status-line" id="repo-status" style="margin-top:10px">
-        Featured repos: <span class="warn">loading…</span>
-      </div>
     </section>
 
-    <!-- Experience timeline -->
+    <section id="featured" class="section">
+      <h2>Open-source / public repos</h2>
+      <p class="hint">Loaded live from GitHub (no backend). Shows recent repos with clean descriptions.</p>
+
+      <div class="repo-grid" id="repo-grid"></div>
+      <div class="status-line" id="repo-status" style="margin-top:10px">Repos: <span class="warn">loading…</span></div>
+    </section>
+
     <section id="timeline" class="section">
       <h2>Experience timeline</h2>
-      <p class="hint">Clean recruiter-friendly chronology (your resume dates).</p>
+      <p class="hint">Recruiter-friendly chronology.</p>
 
       <div class="timeline">
         <div class="t-item">
@@ -642,10 +571,8 @@
             </div>
             <div class="t-dates">May 10, 2023 — Present</div>
           </div>
-          <p class="t-notes">Platform + DevOps: Azure, AKS, Helm, Terraform/ARM, CI/CD, production support, reliability, automation.</p>
-          <div class="tags t-tags">
-            <span class="tag c">AKS</span><span class="tag">Azure DevOps</span><span class="tag b">Terraform/ARM</span><span class="tag">Helm/Docker</span><span class="tag a">.NET</span>
-          </div>
+          <p class="t-notes">AKS delivery, CI/CD, infra automation, storage/identity troubleshooting, production support and reliability improvements.</p>
+          <div class="tags t-tags"><span class="tag c">AKS</span><span class="tag">Azure DevOps</span><span class="tag b">Terraform/ARM</span><span class="tag">Helm/Docker</span><span class="tag a">.NET</span></div>
         </div>
 
         <div class="t-item">
@@ -656,10 +583,8 @@
             </div>
             <div class="t-dates">Mar 23, 2022 — Feb 28, 2023</div>
           </div>
-          <p class="t-notes">DevOps + cloud automation across AWS/Azure; microservices support; CI/CD; healthcare integrations.</p>
-          <div class="tags t-tags">
-            <span class="tag">Azure</span><span class="tag w">AWS</span><span class="tag">CI/CD</span><span class="tag b">Terraform/ARM</span><span class="tag c">Kubernetes/Helm</span>
-          </div>
+          <p class="t-notes">Cloud automation across AWS/Azure, CI/CD improvements, and support for backend systems and integrations.</p>
+          <div class="tags t-tags"><span class="tag">Azure</span><span class="tag w">AWS</span><span class="tag">CI/CD</span><span class="tag b">Automation</span></div>
         </div>
 
         <div class="t-item">
@@ -670,10 +595,8 @@
             </div>
             <div class="t-dates">Jun 10, 2019 — Dec 21, 2021</div>
           </div>
-          <p class="t-notes">Airlines domain: booking & seat management, microservices, Angular modules, DevOps support, delivery leadership.</p>
-          <div class="tags t-tags">
-            <span class="tag a">Angular</span><span class="tag a">.NET</span><span class="tag b">Docker</span><span class="tag c">Helm/K8s</span><span class="tag">Microservices</span>
-          </div>
+          <p class="t-notes">Airlines domain delivery: booking flows, seat map features, service development, containerization, and team leadership.</p>
+          <div class="tags t-tags"><span class="tag a">Angular</span><span class="tag a">.NET</span><span class="tag b">Docker</span><span class="tag c">K8s/Helm</span></div>
         </div>
 
         <div class="t-item">
@@ -684,24 +607,20 @@
             </div>
             <div class="t-dates">Aug 12, 2018 — Jun 8, 2019</div>
           </div>
-          <p class="t-notes">Healthcare/EHR integration: EPIC + AthenaHealth; SAML; HL7/FHIR; HIPAA compliance; fullstack delivery.</p>
-          <div class="tags t-tags">
-            <span class="tag">EHR</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag a">.NET Core</span><span class="tag a">React/Angular</span>
-          </div>
+          <p class="t-notes">Healthcare integration with EHR providers, SAML auth, and HL7/FHIR workflows.</p>
+          <div class="tags t-tags"><span class="tag">EHR</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag a">.NET Core</span></div>
         </div>
 
         <div class="t-item">
           <div class="t-top">
             <div>
-              <div class="t-role">Web Developer (.NET + MEAN/MERN, Azure, Linux)</div>
+              <div class="t-role">Web Developer (.NET + Angular + Azure)</div>
               <div class="t-co">Eudemonic Technologies Pvt. Ltd.</div>
             </div>
             <div class="t-dates">May 22, 2017 — Aug 3, 2018</div>
           </div>
-          <p class="t-notes">Fullstack web apps using Angular + Node/.NET; SQL Server; Azure-hosted workflows; migrations and tooling.</p>
-          <div class="tags t-tags">
-            <span class="tag a">Angular</span><span class="tag">Node/.NET</span><span class="tag">SQL Server</span><span class="tag">Azure</span><span class="tag b">Linux</span>
-          </div>
+          <p class="t-notes">Fullstack apps with Angular + .NET/Node; SQL Server; Azure-hosted deployments and tooling.</p>
+          <div class="tags t-tags"><span class="tag a">Angular</span><span class="tag">.NET</span><span class="tag">SQL Server</span><span class="tag">Azure</span></div>
         </div>
 
         <div class="t-item">
@@ -712,10 +631,8 @@
             </div>
             <div class="t-dates">Aug 16, 2016 — Mar 17, 2017</div>
           </div>
-          <p class="t-notes">ASP.NET MVC + VBScript; legacy modernization; web UI from mockups.</p>
-          <div class="tags t-tags">
-            <span class="tag a">ASP.NET MVC</span><span class="tag">VBScript</span><span class="tag">Modernization</span>
-          </div>
+          <p class="t-notes">ASP.NET MVC + legacy scripts; small modernization work and UI delivery.</p>
+          <div class="tags t-tags"><span class="tag a">ASP.NET MVC</span><span class="tag">Legacy</span></div>
         </div>
 
         <div class="t-item" style="margin-bottom:0">
@@ -726,43 +643,36 @@
             </div>
             <div class="t-dates">Dec 11, 2013 — Jul 29, 2016</div>
           </div>
-          <p class="t-notes">ASP.NET MVC and .NET Framework websites/APIs; foundational engineering.</p>
-          <div class="tags t-tags">
-            <span class="tag a">.NET Framework</span><span class="tag a">ASP.NET MVC</span><span class="tag">Web APIs</span>
-          </div>
+          <p class="t-notes">ASP.NET MVC and .NET Framework websites/APIs; foundational engineering and delivery work.</p>
+          <div class="tags t-tags"><span class="tag a">.NET Framework</span><span class="tag a">ASP.NET MVC</span><span class="tag">Web APIs</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills" class="section">
       <h2>Skills</h2>
-      <p class="hint">Optimized for platform engineering + cloud-native delivery (Azure/AWS) and production-grade backend systems.</p>
+      <p class="hint">Platform engineering + cloud-native delivery.</p>
 
-      <div class="two-col">
-        <div class="mini">
-          <h3>Core engineering</h3>
+      <div class="grid">
+        <div class="mini span-6">
+          <h3>Backend & App</h3>
           <ul class="list">
-            <li>.NET / .NET Core • C# • REST APIs • GraphQL</li>
-            <li>Python (Django / DRF) • Node.js • Go (automation)</li>
-            <li>React • Angular • TypeScript</li>
-            <li>SQL Server • Data integration (Healthcare/EHR, Airlines)</li>
+            <li>.NET / .NET Core • C# • REST • GraphQL</li>
+            <li>Python • Node.js • React • Angular</li>
+            <li>SQL Server • integrations (airlines, healthcare)</li>
           </ul>
         </div>
-
-        <div class="mini">
-          <h3>Cloud / DevOps</h3>
+        <div class="mini span-6">
+          <h3>Cloud & DevOps</h3>
           <ul class="list">
-            <li>Azure: AKS, App Services, Functions, Storage, Key Vault</li>
-            <li>Kubernetes: Helm, Docker, deployments, incident support</li>
-            <li>IaC: Terraform, ARM, Ansible</li>
-            <li>CI/CD: Azure DevOps, Jenkins • Observability</li>
+            <li>Azure: AKS, Functions, Storage, Key Vault</li>
+            <li>Helm • Docker • Kubernetes operations</li>
+            <li>Terraform/ARM • Azure DevOps • Observability</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
     <section class="section" aria-label="contact">
       <div class="mini" id="contact-section" style="margin-top:12px">
         <h3>Let’s connect</h3>
@@ -776,25 +686,14 @@
 
     <footer>
       <div>© <span id="yr"></span> Abhishek Dixit • Built for GitHub Pages</div>
-      <div class="small">Single-file <span class="mono">index.html</span> • No frameworks • Fast load</div>
+      <div class="small">Single-file <span class="mono">index.html</span> • No frameworks</div>
     </footer>
   </main>
 
   <script>
-    // ===== Config =====
     const GH_USER = "dixitabhishek63";
+    const AI_REPOS = ["neural-vault","devfix-auto-agent","echo-negotiator","model-smith","nexus-flow","alter-ego"];
 
-    // Preferred repos to feature first (if exist), then fallback
-    const PREFERRED_REPOS = [
-      "neural-vault",
-      "devfix-auto-agent",
-      "echo-negotiator",
-      "model-smith",
-      "nexus-flow",
-      "alter-ego"
-    ];
-
-    // ===== Utilities =====
     const fmtNum = (n) => (typeof n === "number" ? n.toLocaleString() : "0");
     const ago = (iso) => {
       if (!iso) return "";
@@ -811,55 +710,48 @@
       return years === 1 ? "1 year ago" : `${years} years ago`;
     };
 
-    function setStatus(el, html) {
-      if (!el) return;
-      el.innerHTML = html;
-    }
+    function setStatus(el, html){ if (el) el.innerHTML = html; }
 
-    // ===== 1) AI cards: show repo link only if repo exists =====
-    async function wireAiRepoLinks() {
+    // Hide repo links until repo exists (but don't show "0 repos found" messaging)
+    async function wireAiRepoLinks(){
       const cards = Array.from(document.querySelectorAll('article.proj[data-repo]'));
-      let ok = 0, miss = 0;
-
       await Promise.all(cards.map(async (card) => {
         const repo = card.getAttribute("data-repo");
-        const linkWrap = card.querySelector(".repo-link");
-        const linkEl = card.querySelector("[data-repo-link]");
-        if (!repo || !linkWrap || !linkEl) return;
+        const wrap = card.querySelector(".repo-link");
+        const a = card.querySelector("[data-repo-link]");
+        if (!repo || !wrap || !a) return;
 
-        const api = `https://api.github.com/repos/${GH_USER}/${repo}`;
-        try {
-          const res = await fetch(api, { headers: { "Accept": "application/vnd.github+json" }});
-          if (!res.ok) { miss++; linkWrap.style.display = "none"; return; }
+        try{
+          const res = await fetch(`https://api.github.com/repos/${GH_USER}/${repo}`, {
+            headers: { "Accept": "application/vnd.github+json" }
+          });
+          if (!res.ok){ wrap.style.display = "none"; return; }
           const data = await res.json();
-          const htmlUrl = data.html_url || `https://github.com/${GH_USER}/${repo}`;
-          linkEl.href = htmlUrl;
-          linkEl.textContent = `${GH_USER}/${repo}`;
-          linkWrap.style.display = "block";
-          ok++;
-        } catch {
-          miss++;
-          linkWrap.style.display = "none";
+          a.href = data.html_url || `https://github.com/${GH_USER}/${repo}`;
+          a.textContent = `${GH_USER}/${repo}`;
+          wrap.style.display = "block";
+        }catch{
+          wrap.style.display = "none";
         }
       }));
 
-      const ghStatus = document.getElementById("gh-status");
-      setStatus(
-        ghStatus,
-        `GitHub status: <span class="ok">ok</span> • AI repos found: <span class="ok">${ok}</span> • hidden (not created yet): <span class="warn">${miss}</span>`
-      );
+      setStatus(document.getElementById("gh-status"), `GitHub: <span class="ok">loaded</span> • showing public repos below`);
     }
 
-    // ===== 2) Featured repos section (GitHub API, no backend) =====
-    function repoCard(repo) {
-      const topics = Array.isArray(repo.topics) ? repo.topics.slice(0, 5) : [];
-      const safeDesc = (repo.description || "").trim() || "No description yet.";
+    // Featured repos: clean fallback descriptions (no “No description yet.”)
+    function safeDesc(repo){
+      const d = (repo.description || "").trim();
+      if (d) return d;
+      if (repo.homepage && repo.homepage.trim()) return `Project homepage: ${repo.homepage.trim()}`;
+      // fallback text that looks normal
+      return `Public repository — last updated ${ago(repo.updated_at)}.`;
+    }
+
+    function repoCard(repo){
       const stars = fmtNum(repo.stargazers_count);
       const forks = fmtNum(repo.forks_count);
       const lang = repo.language || "—";
       const updated = ago(repo.updated_at);
-
-      const topicBadges = topics.map(t => `<span class="badge">${t}</span>`).join("");
 
       return `
         <article class="repo">
@@ -867,7 +759,7 @@
             <div class="top">
               <div>
                 <h3><a href="${repo.html_url}" target="_blank" rel="noreferrer">${repo.name}</a></h3>
-                <p>${safeDesc}</p>
+                <p>${safeDesc(repo)}</p>
               </div>
               <div class="badge" title="Primary language">${lang}</div>
             </div>
@@ -875,58 +767,53 @@
               <span class="badge">★ ${stars}</span>
               <span class="badge">⑂ ${forks}</span>
               <span class="badge">updated ${updated}</span>
-              ${topicBadges}
             </div>
           </div>
         </article>
       `;
     }
 
-    async function loadFeaturedRepos() {
+    async function loadFeaturedRepos(){
       const grid = document.getElementById("repo-grid");
       const status = document.getElementById("repo-status");
 
-      try {
-        // Ask for topics too (works for public repos; some accounts may still return empty topics)
+      try{
         const res = await fetch(`https://api.github.com/users/${GH_USER}/repos?per_page=100&sort=updated`, {
-          headers: {
-            "Accept": "application/vnd.github+json"
-          }
+          headers: { "Accept": "application/vnd.github+json" }
         });
-
         if (!res.ok) throw new Error("GitHub API error");
         const repos = await res.json();
 
+        // prefer AI repos if they exist, else fall back to most-starred / updated
         const byName = new Map(repos.map(r => [r.name, r]));
-        const preferred = PREFERRED_REPOS.map(n => byName.get(n)).filter(Boolean);
+        const preferred = AI_REPOS.map(n => byName.get(n)).filter(Boolean);
 
-        // Fallback pool: most starred then recently updated
         const fallback = repos
-          .filter(r => !PREFERRED_REPOS.includes(r.name))
+          .filter(r => !AI_REPOS.includes(r.name))
           .sort((a,b) => (b.stargazers_count - a.stargazers_count) || (new Date(b.updated_at) - new Date(a.updated_at)));
 
         const picks = [...preferred, ...fallback].slice(0, 6);
 
-        if (!picks.length) {
-          grid.innerHTML = `<div class="mini span-12"><h3>No public repos found</h3><p class="small">Create public repos to show them here.</p></div>`;
-          setStatus(status, `Featured repos: <span class="warn">none</span>`);
+        if (!picks.length){
+          grid.innerHTML = `<div class="mini" style="grid-column: span 12">
+            <h3>No public repos found</h3>
+            <p class="small">Create public repos and they will show here automatically.</p>
+          </div>`;
+          setStatus(status, `Repos: <span class="warn">none</span>`);
           return;
         }
 
         grid.innerHTML = picks.map(repoCard).join("");
-        setStatus(status, `Featured repos: <span class="ok">loaded</span> • showing <span class="ok">${picks.length}</span>`);
-      } catch (e) {
-        grid.innerHTML = `
-          <div class="mini" style="grid-column: span 12">
-            <h3>Couldn’t load repos right now</h3>
-            <p class="small">GitHub API may be rate-limited. Refresh later, or the section will populate automatically.</p>
-          </div>
-        `;
-        setStatus(status, `Featured repos: <span class="warn">API unavailable / rate-limited</span>`);
+        setStatus(status, `Repos: <span class="ok">loaded</span> • showing <span class="ok">${picks.length}</span>`);
+      }catch(e){
+        grid.innerHTML = `<div class="mini" style="grid-column: span 12">
+          <h3>Couldn’t load repos right now</h3>
+          <p class="small">GitHub API can be rate-limited. Refresh later.</p>
+        </div>`;
+        setStatus(status, `Repos: <span class="warn">API rate limit / unavailable</span>`);
       }
     }
 
-    // ===== Boot =====
     document.getElementById("yr").textContent = new Date().getFullYear();
     wireAiRepoLinks();
     loadFeaturedRepos();

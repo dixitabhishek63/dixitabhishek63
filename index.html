@@ -66,6 +66,7 @@
     }
     .brand .t1{font-weight:780; letter-spacing:.2px}
     .brand .t2{font-size:12.5px; color:var(--muted2); margin-top:2px}
+
     .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     .pill{
       display:inline-flex; align-items:center; gap:8px;
@@ -294,61 +295,60 @@
     .status-line{margin-top:10px; font-family: var(--mono); color: rgba(255,255,255,.65); font-size: 12px;}
     .status-line .ok{color: rgba(52,211,153,.92)}
     .status-line .warn{color: rgba(251,191,36,.92)}
- 
-  /* Tech logo strip (2 rows) */
-  .tech-block{ margin-top:14px; }
-  .tech-row-title{
-    margin: 10px 0 8px;
-    font-size: 12px;
-    letter-spacing: .35px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,.62);
-    font-family: var(--mono);
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .tech-row-title::after{
-    content:"";
-    height:1px;
-    flex:1;
-    background: rgba(255,255,255,.08);
-  }
-  .tech-strip{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-  .tech{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 10px;
-    border-radius:999px;
-    border:1px solid rgba(255,255,255,.10);
-    background: rgba(255,255,255,.045);
-    color: rgba(255,255,255,.82);
-    font-size: 12.5px;
-    line-height:1;
-    white-space: nowrap;
-  }
-  .tech img{
-    width:18px;
-    height:18px;
-    object-fit:contain;
-    filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
-  }
-  .tech .ai-badge{
-    width:18px; height:18px;
-    display:inline-grid; place-items:center;
-    border-radius:6px;
-    background: linear-gradient(135deg, rgba(124,92,255,.85), rgba(34,211,238,.75));
-    border:1px solid rgba(255,255,255,.16);
-    box-shadow: 0 10px 24px rgba(124,92,255,.18);
-    font-size:12px;
-  }
 
-  
+    /* Tech logo strip (2 rows) */
+    .tech-block{ margin-top:14px; }
+    .tech-row-title{
+      margin: 10px 0 8px;
+      font-size: 12px;
+      letter-spacing: .35px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.62);
+      font-family: var(--mono);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .tech-row-title::after{
+      content:"";
+      height:1px;
+      flex:1;
+      background: rgba(255,255,255,.08);
+    }
+    .tech-strip{display:flex; flex-wrap:wrap; gap:10px;}
+    .tech{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.045);
+      color: rgba(255,255,255,.82);
+      font-size: 12.5px;
+      line-height:1;
+      white-space: nowrap;
+    }
+    .tech img{
+      width:18px; height:18px;
+      object-fit:contain;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+    }
+    .tech .ai-badge{
+      width:18px; height:18px;
+      display:inline-grid; place-items:center;
+      border-radius:6px;
+      background: linear-gradient(135deg, rgba(124,92,255,.85), rgba(34,211,238,.75));
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow: 0 10px 24px rgba(124,92,255,.18);
+      font-size:12px;
+    }
+
+    /* Experience / focus lists */
+    .list{margin:0; padding-left: 18px; color: var(--muted); font-size: 13.5px; line-height: 1.65;}
+
+    /* anchor spacing for sticky nav */
+    .anchor{scroll-margin-top: 84px;}
   </style>
 </head>
 
@@ -365,6 +365,9 @@
 
       <div class="links">
         <a class="pill" href="#focus">Focus</a>
+        <a class="pill" href="#platform">Platforms</a>
+        <a class="pill" href="#systems">Systems</a>
+        <a class="pill" href="#arch">Architecture</a>
         <a class="pill" href="#ai">AI Projects</a>
         <a class="pill" href="#featured">Open-source</a>
         <a class="pill" href="#timeline">Experience</a>
@@ -375,6 +378,7 @@
   </div>
 
   <main class="wrap">
+    <!-- HERO -->
     <section class="hero">
       <div class="card">
         <div class="in">
@@ -397,7 +401,8 @@
             <a class="btn" href="https://github.com/dixitabhishek63" target="_blank" rel="noreferrer">GitHub</a>
           </div>
 
-          <div class="grid" id="focus">
+          <!-- Focus cards -->
+          <div class="grid anchor" id="focus">
             <div class="mini span-4">
               <h3>Staff focus: reliability</h3>
               <p>Operational excellence: SLOs/alerts, incident response, rollout safety, and repeatable fixes (runbooks + automation).</p>
@@ -416,96 +421,39 @@
               <p class="mono">AKS • Helm • Docker • Terraform/ARM • Azure DevOps • Key Vault • Workload Identity • Observability • Python • FastAPI • LangGraph</p>
             </div>
           </div>
-          <div class="tech-block" aria-label="Technology stack logos">
-  <!-- PLATFORM ROW -->
-  <div class="tech-row-title">Platform</div>
-  <div class="tech-strip">
-    <span class="tech">
-      <img alt="Azure" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-           onerror="this.style.display='none'">
-      Azure
-    </span>
-    <span class="tech">
-      <img alt="Kubernetes" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-           onerror="this.style.display='none'">
-      Kubernetes / AKS
-    </span>
-    <span class="tech">
-      <img alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-           onerror="this.style.display='none'">
-      Docker
-    </span>
-    <span class="tech">
-      <img alt="Terraform" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
-           onerror="this.style.display='none'">
-      Terraform
-    </span>
-    <span class="tech">
-      <img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-           onerror="this.style.display='none'">
-      GitHub / Actions
-    </span>
-    <span class="tech">
-      <img alt="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-           onerror="this.style.display='none'">
-      Linux
-    </span>
-    <span class="tech">
-      <img alt="PostgreSQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-           onerror="this.style.display='none'">
-      Postgres
-    </span>
-    <span class="tech">
-      <img alt="Redis" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-           onerror="this.style.display='none'">
-      Redis
-    </span>
-  </div>
 
-  <!-- AI ROW -->
-  <div class="tech-row-title" style="margin-top:14px;">AI Systems</div>
-  <div class="tech-strip">
-    <span class="tech">
-      <span class="ai-badge" title="LLMs">✦</span>
-      LLM Apps
-    </span>
-    <span class="tech">
-      <img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-           onerror="this.style.display='none'">
-      Python
-    </span>
-    <span class="tech">
-      <img alt="FastAPI" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-           onerror="this.style.display='none'">
-      FastAPI
-    </span>
-    <span class="tech">
-      <span class="ai-badge" title="RAG">R</span>
-      RAG
-    </span>
-    <span class="tech">
-      <span class="ai-badge" title="Agents">A</span>
-      Agents / LangGraph
-    </span>
-    <span class="tech">
-      <span class="ai-badge" title="Vector DB">V</span>
-      Vector DB (Chroma)
-    </span>
-    <span class="tech">
-      <span class="ai-badge" title="Quantization">Q</span>
-      GGUF / Quantization
-    </span>
-    <span class="tech">
-      <span class="ai-badge" title="Realtime streaming">S</span>
-      Realtime Streaming
-    </span>
-  </div>
-</div
+          <!-- Tech logos: 2 rows -->
+          <div class="tech-block" aria-label="Technology stack logos">
+            <div class="tech-row-title">Platform</div>
+            <div class="tech-strip">
+              <span class="tech"><img alt="Azure" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" onerror="this.style.display='none'">Azure</span>
+              <span class="tech"><img alt="Kubernetes" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" onerror="this.style.display='none'">Kubernetes / AKS</span>
+              <span class="tech"><img alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" onerror="this.style.display='none'">Docker</span>
+              <span class="tech"><img alt="Terraform" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" onerror="this.style.display='none'">Terraform</span>
+              <span class="tech"><img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" onerror="this.style.display='none'">GitHub / Actions</span>
+              <span class="tech"><img alt="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" onerror="this.style.display='none'">Linux</span>
+              <span class="tech"><img alt="PostgreSQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" onerror="this.style.display='none'">Postgres</span>
+              <span class="tech"><img alt="Redis" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" onerror="this.style.display='none'">Redis</span>
+            </div>
+
+            <div class="tech-row-title" style="margin-top:14px;">AI Systems</div>
+            <div class="tech-strip">
+              <span class="tech"><span class="ai-badge" title="LLMs">✦</span>LLM Apps</span>
+              <span class="tech"><img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" onerror="this.style.display='none'">Python</span>
+              <span class="tech"><img alt="FastAPI" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" onerror="this.style.display='none'">FastAPI</span>
+              <span class="tech"><span class="ai-badge" title="RAG">R</span>RAG</span>
+              <span class="tech"><span class="ai-badge" title="Agents">A</span>Agents / LangGraph</span>
+              <span class="tech"><span class="ai-badge" title="Vector DB">V</span>Vector DB (Chroma)</span>
+              <span class="tech"><span class="ai-badge" title="Quantization">Q</span>GGUF / Quantization</span>
+              <span class="tech"><span class="ai-badge" title="Realtime streaming">S</span>Realtime Streaming</span>
+            </div>
+          </div>
 
           <div class="status-line" id="gh-status">GitHub: <span class="warn">loading…</span></div>
         </div>
       </div>
 
+      <!-- Snapshot -->
       <div class="card">
         <div class="in">
           <h2 style="margin:0 0 10px">Snapshot</h2>
@@ -538,32 +486,145 @@
       </div>
     </section>
 
-    <section id="ai" class="section">
-      <h2>AI projects (built as real systems)</h2>
-      <p class="hint">These are engineered as production-ready builds. Repo links appear only when the repo exists.</p>
+    <!-- ✅ (1) Production Platform Systems -->
+    <section id="platform" class="section anchor">
+      <h2>Production Platform Systems</h2>
+      <p class="hint">Cloud platforms and distributed systems I designed, delivered, and operated in production.</p>
+
+      <div class="cards">
+        <article class="proj">
+          <div class="in">
+            <h3>Multi-tenant AKS Delivery Platform</h3>
+            <p>
+              Built namespace-isolated microservice delivery on AKS with Helm releases, workload identity,
+              environment-specific config, and guardrails for safe rollouts.
+            </p>
+            <div class="tags">
+              <span class="tag c">AKS</span><span class="tag">Helm</span><span class="tag">Workload Identity</span><span class="tag">Azure DevOps</span><span class="tag">Terraform/ARM</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>File Ingestion & Orchestration Platform</h3>
+            <p>
+              Durable Functions based ingestion pipeline: secure file movement, decryption, lifecycle routing
+              (processing/success/failure), and automated retry orchestration with observable runs.
+            </p>
+            <div class="tags">
+              <span class="tag">Durable Functions</span><span class="tag">Blob Storage</span><span class="tag">Event-driven</span><span class="tag">Retries</span><span class="tag">Observability</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>Production CI/CD & Release Guardrails</h3>
+            <p>
+              Standardized pipelines for build/test/deploy, tokenized config promotion, safe Helm upgrades,
+              and rollout patterns (health checks, rollback playbooks, environment parity).
+            </p>
+            <div class="tags">
+              <span class="tag">CI/CD</span><span class="tag">Azure DevOps</span><span class="tag">Helm</span><span class="tag">Release Safety</span><span class="tag">Runbooks</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="in">
+            <h3>Integration Platforms (Airlines / Healthcare)</h3>
+            <p>
+              Delivered integrations under real constraints: authentication flows, domain workflows,
+              compliance-friendly logging, and predictable operations across teams.
+            </p>
+            <div class="tags">
+              <span class="tag">Workflows</span><span class="tag">Integrations</span><span class="tag">Security</span><span class="tag">Compliance</span><span class="tag">Delivery Ownership</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ✅ (2) Systems I Design -->
+    <section id="systems" class="section anchor">
+      <h2>Systems I Design</h2>
+      <p class="hint">Architecture patterns I regularly implement and operate.</p>
+
+      <div class="cards">
+        <article class="proj"><div class="in">
+          <h3>Event-driven platforms</h3>
+          <p>Queues, orchestration, retries, idempotency, backpressure, and workflow state machines.</p>
+          <div class="tags"><span class="tag">Idempotency</span><span class="tag">Retries</span><span class="tag">State Machines</span><span class="tag">Backpressure</span></div>
+        </div></article>
+
+        <article class="proj"><div class="in">
+          <h3>Cloud-native delivery platforms</h3>
+          <p>Multi-tenant Kubernetes, secure identity & secrets, storage isolation, ingress, and guardrails.</p>
+          <div class="tags"><span class="tag c">Kubernetes</span><span class="tag">Identity</span><span class="tag">Secrets</span><span class="tag">Storage</span></div>
+        </div></article>
+
+        <article class="proj"><div class="in">
+          <h3>AI infrastructure</h3>
+          <p>RAG systems, agent loops, evaluation pipelines, safe execution, and latency-aware inference.</p>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">Agents</span><span class="tag">Eval</span><span class="tag">Sandboxing</span></div>
+        </div></article>
+
+        <article class="proj"><div class="in">
+          <h3>Integration and automation</h3>
+          <p>Secure connectors, domain workflows, and automation that reduces toil and increases reliability.</p>
+          <div class="tags"><span class="tag">Automation</span><span class="tag">Runbooks</span><span class="tag">Observability</span><span class="tag">Reliability</span></div>
+        </div></article>
+      </div>
+    </section>
+
+    <!-- ✅ (3) Architecture Focus -->
+    <section id="arch" class="section anchor">
+      <h2>Architecture Focus</h2>
+      <p class="hint">How I think about production systems and staff-level impact.</p>
+
+      <div class="mini">
+        <ul class="list">
+          <li>Reliability engineering: retries, idempotency, circuit breakers, rollout safety</li>
+          <li>Multi-tenant platform design: isolation, least privilege, predictable ops</li>
+          <li>Identity & secrets: workload identity, RBAC, key management, auditability</li>
+          <li>Observability-first: logs/metrics/traces, actionable alerts, SLO thinking</li>
+          <li>AI safety & evaluation: regression datasets, automated eval harnesses, guardrails</li>
+          <li>Latency-aware design: streaming paths, async concurrency, resource budgets</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ✅ (4) AI projects upgraded tone: “products” -->
+    <section id="ai" class="section anchor">
+      <h2>AI systems (built as products)</h2>
+      <p class="hint">
+        Production-style AI systems exploring reliability, latency, safety, offline operation, and evaluation — not demos.
+        Repo links appear only when the repo exists.
+      </p>
 
       <div class="cards">
         <article class="proj" data-repo="neural-vault"><div class="in">
-          <h3>Neural Vault — Offline RAG on consumer hardware</h3>
-          <p>Offline-first document chat for sensitive files. Focus: GGUF quantization, local embeddings, on-device retrieval, and RAM-aware model loading.</p>
+          <h3>Neural Vault — Offline document intelligence (RAG)</h3>
+          <p>Offline-first document intelligence system enabling secure local RAG with quantized GGUF inference and embedded vector search.</p>
           <div class="tags">
-            <span class="tag a">llama.cpp</span><span class="tag b">GGUF 4-bit</span><span class="tag c">ChromaDB</span><span class="tag">Local RAG</span>
+            <span class="tag a">llama.cpp</span><span class="tag b">GGUF</span><span class="tag c">ChromaDB</span><span class="tag">Local RAG</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
 
         <article class="proj" data-repo="devfix-auto-agent"><div class="in">
-          <h3>DevFix Auto-Agent — Self-healing coding loop</h3>
-          <p>Agent writes code, runs tests, reads failures, and retries—safely. Focus: stateful graphs, sandboxed Docker execution, AST validation, and traceable runs.</p>
+          <h3>DevFix Auto-Agent — Autonomous repair loops</h3>
+          <p>Autonomous coding agent executing iterative repair loops with sandboxed execution and stateful reasoning across attempts.</p>
           <div class="tags">
-            <span class="tag a">LangGraph</span><span class="tag b">Docker</span><span class="tag c">PyTest</span><span class="tag">AST</span>
+            <span class="tag a">LangGraph</span><span class="tag b">Docker</span><span class="tag c">PyTest</span><span class="tag">Sandbox</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
 
         <article class="proj" data-repo="echo-negotiator"><div class="in">
-          <h3>Echo Negotiator — Full-duplex voice AI (low latency)</h3>
-          <p>Streaming voice pipeline with interruption handling. Focus: WebSockets, VAD, async concurrency, and streaming STT→LLM→TTS with tight latency budgets.</p>
+          <h3>Echo Negotiator — Realtime voice infrastructure</h3>
+          <p>Low-latency realtime voice infrastructure supporting interruptible streaming AI conversations with tight response budgets.</p>
           <div class="tags">
             <span class="tag a">FastAPI</span><span class="tag b">WebSockets</span><span class="tag c">VAD</span><span class="tag">Streaming</span>
           </div>
@@ -571,17 +632,17 @@
         </div></article>
 
         <article class="proj" data-repo="model-smith"><div class="in">
-          <h3>Model Smith — Synthetic data + PEFT fine-tuning pipeline</h3>
-          <p>End-to-end fine-tuning workflow: dataset generation, LoRA/QLoRA training, automated evaluation, and regression benchmarks for repeatability.</p>
+          <h3>Model Smith — Fine-tuning + eval pipeline</h3>
+          <p>End-to-end fine-tuning pipeline: synthetic data generation, PEFT training, regression evaluation, and repeatable experiments.</p>
           <div class="tags">
-            <span class="tag a">TRL</span><span class="tag b">LoRA/QLoRA</span><span class="tag c">RAGAS</span><span class="tag">Eval harness</span>
+            <span class="tag a">TRL</span><span class="tag b">LoRA/QLoRA</span><span class="tag c">RAGAS</span><span class="tag">Eval Harness</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
 
         <article class="proj" data-repo="nexus-flow"><div class="in">
-          <h3>Nexus Flow — Event-driven multi-agent orchestration + HITL</h3>
-          <p>Backend that reacts to Slack/Jira events, routes tasks to specialists, and pauses for approvals. Focus: persisted state, resumable workflows, and guardrails.</p>
+          <h3>Nexus Flow — Event-driven agent orchestration</h3>
+          <p>Event-driven multi-agent orchestration with persisted state and human approval checkpoints for safe automation.</p>
           <div class="tags">
             <span class="tag a">LangGraph</span><span class="tag b">Postgres</span><span class="tag c">Webhooks</span><span class="tag">HITL</span>
           </div>
@@ -589,8 +650,8 @@
         </div></article>
 
         <article class="proj" data-repo="alter-ego"><div class="in">
-          <h3>Alter Ego — Hybrid retrieval memory (Vector + Graph)</h3>
-          <p>Digital-twin memory system combining vector search + knowledge graph. Focus: GraphRAG patterns, summarization, and controllable “style memory”.</p>
+          <h3>Alter Ego — Hybrid memory (Vector + Graph)</h3>
+          <p>Hybrid memory system combining graph reasoning and vector retrieval to maintain durable context and controllable “style memory”.</p>
           <div class="tags">
             <span class="tag a">Neo4j</span><span class="tag b">LangChain</span><span class="tag c">NetworkX</span><span class="tag">GraphRAG</span>
           </div>
@@ -599,7 +660,8 @@
       </div>
     </section>
 
-    <section id="featured" class="section">
+    <!-- ✅ (5) Open-source / public repos -->
+    <section id="featured" class="section anchor">
       <h2>Open-source / public repos</h2>
       <p class="hint">Loaded live from GitHub (no backend). Shows preferred repos first, then recent/high-signal repos.</p>
 
@@ -607,7 +669,8 @@
       <div class="status-line" id="repo-status" style="margin-top:10px">Repos: <span class="warn">loading…</span></div>
     </section>
 
-    <section id="timeline" class="section">
+    <!-- Experience timeline -->
+    <section id="timeline" class="section anchor">
       <h2>Experience timeline</h2>
       <p class="hint">Clean, recruiter-friendly chronology aligned to your resume dates.</p>
 
@@ -698,7 +761,8 @@
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <!-- Skills -->
+    <section id="skills" class="section anchor">
       <h2>Skills</h2>
       <p class="hint">Platform engineering + cloud delivery + AI systems engineering (tools & frameworks).</p>
 
@@ -710,7 +774,7 @@
             <li>Kubernetes: Helm, Kustomize, Ingress, RBAC, PV/PVC, CSI</li>
             <li>Identity: Workload Identity, UAMI, RBAC, secrets management</li>
             <li>IaC: Terraform, ARM/Bicep (concepts), config templating</li>
-            <li>CI/CD: Azure DevOps, build/release pipelines, rollback strategies</li>
+            <li>CI/CD: Azure DevOps, GitHub Actions (concepts), rollout/rollback strategies</li>
             <li>Ops: incident response, runbooks, alerting, reliability improvements</li>
           </ul>
         </div>
@@ -718,13 +782,13 @@
         <div class="mini span-6">
           <h3>AI / LLM Engineering (practical)</h3>
           <ul class="list">
-            <li>RAG: chunking, embedding search, hybrid retrieval, grounding</li>
-            <li>Vector DBs: ChromaDB, FAISS, pgvector (concepts)</li>
+            <li>RAG: chunking, embeddings, hybrid retrieval, grounding patterns</li>
+            <li>Vector stores: ChromaDB, FAISS, pgvector (concepts)</li>
             <li>Local inference: llama.cpp, GGUF quantization, Ollama (runtime)</li>
             <li>Agents: LangGraph, tool calling, stateful graphs, memory patterns</li>
-            <li>Eval: RAGAS (concepts), regression datasets, prompt A/B testing</li>
+            <li>Evaluation: RAGAS (concepts), regression datasets, prompt A/B testing</li>
             <li>Fine-tuning: LoRA/QLoRA, TRL (concepts), synthetic data pipelines</li>
-            <li>Realtime voice: WebSockets, VAD concepts, streaming pipelines</li>
+            <li>Realtime: WebSockets, VAD concepts, streaming pipelines</li>
           </ul>
         </div>
 
@@ -733,8 +797,8 @@
           <ul class="list">
             <li>Python: FastAPI, AsyncIO, background workers</li>
             <li>Data: SQL Server, Postgres, Redis (concepts)</li>
-            <li>Event-driven: queues/webhooks, retries, idempotency patterns</li>
-            <li>Security: secure execution, least privilege, audit-friendly design</li>
+            <li>Event-driven: retries, idempotency patterns, webhook pipelines</li>
+            <li>Security: least privilege, audit-friendly design, secure execution</li>
           </ul>
         </div>
 
@@ -742,7 +806,7 @@
           <h3>Product Engineering</h3>
           <ul class="list">
             <li>React / TypeScript (internal tools & portals)</li>
-            <li>API design: REST, auth patterns, rate limiting</li>
+            <li>API design: REST, auth patterns, rate limiting basics</li>
             <li>Integrations: airlines workflows, healthcare/EHR concepts</li>
             <li>Documentation: design notes, runbooks, onboarding guides</li>
           </ul>
@@ -750,7 +814,8 @@
       </div>
     </section>
 
-    <section class="section" aria-label="contact">
+    <!-- Contact -->
+    <section class="section anchor" aria-label="contact">
       <div class="mini" id="contact-section" style="margin-top:12px">
         <h3>Let’s connect</h3>
         <p class="small">

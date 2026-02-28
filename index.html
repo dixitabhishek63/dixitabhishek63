@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b1220" />
-  <meta name="description" content="Abhishek Dixit — Platform Engineer (.NET / Azure / Kubernetes) focused on cloud delivery, reliability, and automation." />
-  <title>Abhishek Dixit — Portfolio</title>
+  <meta name="description" content="Abhishek Dixit — Staff/Platform Engineer • Cloud • DevOps • AI Systems. Building reliable platforms, agentic workflows, and production-grade automation." />
+  <title>Abhishek Dixit — Staff Engineer Portfolio</title>
 
   <style>
     :root{
@@ -24,11 +24,10 @@
       --shadow: 0 14px 40px rgba(0,0,0,.45);
       --radius: 18px;
       --radius2: 14px;
-      --max: 1100px;
+      --max: 1120px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -42,35 +41,31 @@
         linear-gradient(180deg, var(--bg0), var(--bg1));
       overflow-x:hidden;
     }
-
     a{color:inherit;text-decoration:none}
     a:hover{opacity:.95}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 56px}
 
     .nav{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(7,10,18,.82), rgba(7,10,18,.35));
+      background: linear-gradient(180deg, rgba(7,10,18,.86), rgba(7,10,18,.38));
       border-bottom: 1px solid rgba(255,255,255,.07);
     }
     .nav-inner{
       max-width:var(--max);
       margin:0 auto;
-      padding:14px 18px;
+      padding:12px 18px;
       display:flex; align-items:center; justify-content:space-between; gap:14px;
     }
-    .brand{display:flex; align-items:center; gap:10px; min-width:240px;}
-    .logo{
-      width:34px; height:34px; border-radius:12px;
-      background:
-        radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.16), transparent 55%),
-        linear-gradient(135deg, rgba(124,92,255,.9), rgba(34,211,238,.85));
-      box-shadow: 0 10px 30px rgba(124,92,255,.22);
-      border:1px solid rgba(255,255,255,.14);
+    .brand{display:flex; align-items:center; gap:12px; min-width:240px;}
+    .avatar{
+      width:40px; height:40px; border-radius:999px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow: 0 10px 28px rgba(0,0,0,.40);
     }
-    .brand .t1{font-weight:750; letter-spacing:.2px}
+    .brand .t1{font-weight:780; letter-spacing:.2px}
     .brand .t2{font-size:12.5px; color:var(--muted2); margin-top:2px}
-
     .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     .pill{
       display:inline-flex; align-items:center; gap:8px;
@@ -85,19 +80,6 @@
       background: rgba(255,255,255,.075);
       border-color: rgba(255,255,255,.16);
       color: var(--text);
-    }
-
-    .hero{
-      padding: 34px 0 10px;
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 920px){
-      .hero{grid-template-columns: 1fr;}
-      .brand{min-width:auto}
-      .links{justify-content:flex-start}
     }
 
     .card{
@@ -118,11 +100,24 @@
     }
     .card > .in{position:relative; padding: 22px 22px 20px;}
 
+    .hero{
+      padding: 18px 0 8px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr;}
+      .brand{min-width:auto}
+      .links{justify-content:flex-start}
+    }
+
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
       font-family: var(--mono);
       font-size:12px;
-      color: rgba(255,255,255,.70);
+      color: rgba(255,255,255,.72);
       letter-spacing:.4px;
     }
     .dot{
@@ -144,7 +139,7 @@
       font-size: 15.5px;
       line-height: 1.55;
       margin: 0 0 16px;
-      max-width: 64ch;
+      max-width: 70ch;
     }
 
     .btn-row{display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;}
@@ -155,7 +150,7 @@
       border:1px solid rgba(255,255,255,.12);
       background: rgba(255,255,255,.06);
       color: var(--text);
-      font-weight: 650;
+      font-weight: 680;
       transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
     .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.085); border-color: rgba(255,255,255,.18);}
@@ -171,9 +166,10 @@
       gap: 14px;
       margin-top: 14px;
     }
-    .span-6{grid-column: span 6}
     .span-12{grid-column: span 12}
-    @media (max-width: 900px){ .span-6{grid-column: span 12} }
+    .span-6{grid-column: span 6}
+    .span-4{grid-column: span 4}
+    @media (max-width: 900px){ .span-6,.span-4{grid-column: span 12} }
 
     .mini{
       border-radius: var(--radius2);
@@ -184,15 +180,11 @@
     .mini h3{margin:0 0 8px; font-size:14px; letter-spacing:.2px;}
     .mini p{margin:0; color: var(--muted); font-size: 13.5px; line-height: 1.45;}
 
-    .section{margin-top: 22px; padding-top: 16px;}
+    .section{margin-top: 20px; padding-top: 14px;}
     .section h2{font-size: 18px; letter-spacing:.2px; margin: 0 0 12px;}
     .section .hint{margin:-4px 0 14px; color: var(--muted2); font-size: 13.5px; line-height: 1.5;}
 
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
+    .cards{display:grid; grid-template-columns: repeat(12, 1fr); gap: 14px;}
     .proj{
       grid-column: span 6;
       border-radius: var(--radius);
@@ -200,12 +192,12 @@
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.035));
       overflow:hidden;
       position:relative;
-      min-height: 188px;
+      min-height: 192px;
     }
     .proj::before{
       content:"";
       position:absolute; inset:0;
-      background: radial-gradient(800px 200px at 18% 0%, rgba(124,92,255,.18), transparent 55%);
+      background: radial-gradient(800px 220px at 18% 0%, rgba(124,92,255,.18), transparent 55%);
       opacity:.9;
       pointer-events:none;
     }
@@ -229,12 +221,8 @@
     .tag.c{border-color: rgba(52,211,153,.26); background: rgba(52,211,153,.08)}
     .tag.w{border-color: rgba(251,191,36,.24); background: rgba(251,191,36,.08)}
 
-    /* Featured repos */
-    .repo-grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-    }
+    /* Repo grid */
+    .repo-grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:14px;}
     .repo{
       grid-column: span 6;
       border-radius: var(--radius);
@@ -247,7 +235,7 @@
     .repo::before{
       content:"";
       position:absolute; inset:0;
-      background: radial-gradient(700px 200px at 20% 0%, rgba(34,211,238,.12), transparent 55%);
+      background: radial-gradient(700px 220px at 20% 0%, rgba(34,211,238,.12), transparent 55%);
       pointer-events:none;
     }
     .repo .in{position:relative}
@@ -255,28 +243,16 @@
     .repo h3{margin:0 0 6px; font-size:14.5px; letter-spacing:.2px}
     .repo p{margin:0; color:var(--muted); font-size: 13px; line-height:1.5}
     .repo .meta{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; color:var(--muted2); font-size:12.5px; font-family:var(--mono)}
-    .repo .badge{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.14);
-      padding: 5px 8px;
-      border-radius: 999px;
-    }
+    .repo .badge{border:1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.14); padding: 5px 8px; border-radius: 999px;}
     @media (max-width: 900px){ .repo{grid-column: span 12;} }
 
     /* Timeline */
-    .timeline{
-      position:relative;
-      margin-top: 10px;
-      padding-left: 18px;
-    }
+    .timeline{position:relative; margin-top: 10px; padding-left: 18px;}
     .timeline::before{
       content:"";
-      position:absolute;
-      left:6px; top:0; bottom:0;
-      width:2px;
+      position:absolute; left:6px; top:0; bottom:0; width:2px;
       background: linear-gradient(180deg, rgba(124,92,255,.55), rgba(34,211,238,.35), rgba(52,211,153,.25));
-      opacity:.9;
-      border-radius:2px;
+      opacity:.9; border-radius:2px;
     }
     .t-item{
       position:relative;
@@ -288,16 +264,14 @@
     }
     .t-item::before{
       content:"";
-      position:absolute;
-      left:-18px; top:18px;
-      width:12px; height:12px;
-      border-radius:999px;
+      position:absolute; left:-18px; top:18px;
+      width:12px; height:12px; border-radius:999px;
       background: rgba(34,211,238,.85);
       box-shadow: 0 0 0 6px rgba(34,211,238,.12);
       border:1px solid rgba(255,255,255,.18);
     }
     .t-top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px;}
-    .t-role{font-weight:750; letter-spacing:.2px}
+    .t-role{font-weight:780; letter-spacing:.2px}
     .t-co{color:var(--muted); font-size:13.5px}
     .t-dates{font-family:var(--mono); font-size:12px; color:var(--muted2); white-space:nowrap}
     .t-notes{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
@@ -317,13 +291,7 @@
     }
     .small{font-size:12.5px; color:var(--muted2)}
     .mono{font-family: var(--mono)}
-
-    .status-line{
-      margin-top:10px;
-      font-family: var(--mono);
-      color: rgba(255,255,255,.65);
-      font-size: 12px;
-    }
+    .status-line{margin-top:10px; font-family: var(--mono); color: rgba(255,255,255,.65); font-size: 12px;}
     .status-line .ok{color: rgba(52,211,153,.92)}
     .status-line .warn{color: rgba(251,191,36,.92)}
   </style>
@@ -333,16 +301,16 @@
   <div class="nav">
     <div class="nav-inner">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
+        <img src="./dixitabhishek63.jpg" alt="Abhishek Dixit" class="avatar" onerror="this.style.display='none'" />
         <div>
           <div class="t1">Abhishek Dixit</div>
-          <div class="t2">Platform Engineer • .NET • Azure • Kubernetes</div>
+          <div class="t2">Staff / Platform Engineer • Cloud • DevOps • AI Systems</div>
         </div>
       </div>
 
       <div class="links">
-        <a class="pill" href="#projects">Projects</a>
-        <a class="pill" href="#ai">AI Work</a>
+        <a class="pill" href="#focus">Focus</a>
+        <a class="pill" href="#ai">AI Projects</a>
         <a class="pill" href="#featured">Open-source</a>
         <a class="pill" href="#timeline">Experience</a>
         <a class="pill" href="#skills">Skills</a>
@@ -355,29 +323,17 @@
     <section class="hero">
       <div class="card">
         <div class="in">
-          <div class="kicker"><span class="dot"></span><span class="mono">Senior / Staff ready • US/Eastern overlap</span></div>
+          <div class="kicker"><span class="dot"></span><span class="mono">Staff-level ownership • US/Eastern overlap • Build → ship → operate</span></div>
 
           <h1>
-            I build <span style="color:rgba(34,211,238,.95)">reliable cloud platforms</span> and ship
-            <span style="color:rgba(124,92,255,.98)">production-grade services</span>.
+            I build <span style="color:rgba(34,211,238,.95)">reliable cloud platforms</span> and
+            <span style="color:rgba(124,92,255,.98)">AI-powered automation</span> that stays operable in production.
           </h1>
 
-          <div style="margin:16px 0">
-  <img src="./dixitabhishek63.jpg" alt="Abhishek Dixit" style="
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid rgba(255,255,255,.18);
-    box-shadow:0 12px 40px rgba(0,0,0,.45);
-  "/>
-</div>
-          
-
           <p class="sub">
-            Platform & full-stack engineer with 13+ years across airlines and healthcare.
-            Strong in <b>.NET</b>, <b>Azure</b>, <b>AKS/Kubernetes</b>, <b>CI/CD</b>, and <b>automation</b>.
-            I like making deployments boring: predictable, observable, and easy to operate.
+            Platform engineer with 13+ years delivering systems in airlines & healthcare. My strength is making production boring:
+            predictable deployments, secure identity & secrets, scalable Kubernetes delivery, and measurable reliability.
+            Recently, I’ve been building AI systems that respect real constraints (latency, offline, safe execution, evaluation).
           </p>
 
           <div class="btn-row">
@@ -386,18 +342,23 @@
             <a class="btn" href="https://github.com/dixitabhishek63" target="_blank" rel="noreferrer">GitHub</a>
           </div>
 
-          <div class="grid">
-            <div class="mini span-6">
-              <h3>Where I add value fast</h3>
-              <p>AKS delivery, Helm deployments, Azure DevOps pipelines, identity/secrets, storage, troubleshooting, and simplifying production operations.</p>
+          <div class="grid" id="focus">
+            <div class="mini span-4">
+              <h3>Staff focus: reliability</h3>
+              <p>Operational excellence: SLOs/alerts, incident response, rollout safety, and repeatable fixes (runbooks + automation).</p>
             </div>
-            <div class="mini span-6">
-              <h3>Currently exploring</h3>
-              <p>Practical AI engineering patterns (offline RAG, agent loops, streaming voice). Building these as side projects with real constraints: latency, safety, and cost.</p>
+            <div class="mini span-4">
+              <h3>Staff focus: platforms</h3>
+              <p>AKS delivery at scale: Helm patterns, secrets/identity, storage, ingress, multi-tenant design, and guardrails.</p>
             </div>
+            <div class="mini span-4">
+              <h3>Staff focus: AI systems</h3>
+              <p>RAG + agents + evaluation. Building systems that are secure, testable, and cost-aware (not “demo-only”).</p>
+            </div>
+
             <div class="mini span-12">
-              <h3>Toolbox</h3>
-              <p class="mono">AKS • Helm • Docker • Terraform/ARM • Azure DevOps • .NET • Python • React • GraphQL • SQL Server • Observability</p>
+              <h3>Operating stack</h3>
+              <p class="mono">AKS • Helm • Docker • Terraform/ARM • Azure DevOps • Key Vault • Workload Identity • Observability • Python • FastAPI • LangGraph</p>
             </div>
           </div>
 
@@ -409,7 +370,7 @@
         <div class="in">
           <h2 style="margin:0 0 10px">Snapshot</h2>
           <p class="hint" style="margin:0 0 14px">
-            Hands-on platform engineer with strong delivery ownership (build → deploy → operate). Airlines + healthcare integrations.
+            Hands-on Staff/Platform engineer. Strong in cloud delivery ownership and making systems operable: build → deploy → observe → improve.
           </p>
 
           <div class="mini" style="margin-bottom:12px">
@@ -429,7 +390,6 @@
             <h3>Certifications</h3>
             <ul class="list">
               <li>CKS • CKA • CKAD</li>
-              <li> Terraform Certified Associate </li>
               <li>Microsoft Azure Administrator Associate</li>
               <li>Microsoft DevOps Engineer Expert</li>
             </ul>
@@ -438,80 +398,23 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <h2>Selected engineering projects</h2>
-      <p class="hint">These are real work projects (client URLs may be private due to compliance).</p>
-
-      <div class="cards">
-        <article class="proj"><div class="in">
-          <h3>CrossWalk — Analytics APIs (GraphQL + REST)</h3>
-          <p>Built APIs serving SQL Server data via GraphQL + REST for dashboards; supported delivery + DevOps (Azure, pipelines, deployments).</p>
-          <div class="tags">
-            <span class="tag a">.NET</span><span class="tag b">Node.js</span><span class="tag c">GraphQL</span><span class="tag">SQL Server</span><span class="tag">Azure</span>
-          </div>
-        </div></article>
-
-        <article class="proj"><div class="in">
-          <h3>Volaris Airlines — Booking platform modernization</h3>
-          <p>Modernized booking flows with Angular + .NET Core, containerized delivery, and Helm-based Kubernetes deployments; supported AWS services.</p>
-          <div class="tags">
-            <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Helm / K8s</span><span class="tag w">AWS</span>
-          </div>
-        </div></article>
-
-        <article class="proj"><div class="in">
-          <h3>Spirit Airlines — mCabin scheduling + seatmap GUI</h3>
-          <p>Built .NET Core services and improved Kubernetes scaling decisions based on request backlog; supported operational workflows.</p>
-          <div class="tags">
-            <span class="tag">.NET Core</span><span class="tag b">Docker</span><span class="tag c">Kubernetes</span><span class="tag w">Autoscaling</span>
-          </div>
-        </div></article>
-
-        <article class="proj"><div class="in">
-          <h3>Phase 10 — Healthcare EHR integration (SAML + HL7/FHIR)</h3>
-          <p>Integrated with EPIC/AthenaHealth, implemented SAML auth, and supported HL7/FHIR compliant workflows for clinical systems.</p>
-          <div class="tags">
-            <span class="tag a">Angular</span><span class="tag">.NET Core</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag">EHR</span>
-          </div>
-        </div></article>
-
-        <article class="proj"><div class="in">
-          <h3>Airmaster — Quotation + Invoice tool</h3>
-          <p>Built quotation & invoicing modules with Angular + ASP.NET WebAPI, SQL Server reporting, and PDF generation.</p>
-          <div class="tags">
-            <span class="tag a">Angular</span><span class="tag">ASP.NET WebAPI</span><span class="tag">SQL Server</span><span class="tag b">Reporting</span>
-          </div>
-        </div></article>
-
-        <article class="proj"><div class="in">
-          <h3>Platform Engineering — AKS + CI/CD + Infra Automation</h3>
-          <p>Delivered microservices on AKS with Helm, automated infra with Terraform/ARM, and supported production reliability + incident response.</p>
-          <div class="tags">
-            <span class="tag c">AKS</span><span class="tag">Helm</span><span class="tag b">Docker</span><span class="tag">Terraform/ARM</span><span class="tag">Azure DevOps</span>
-          </div>
-        </div></article>
-      </div>
-    </section>
-
     <section id="ai" class="section">
-      <h2>AI work (side projects / in progress)</h2>
-      <p class="hint">
-        I’m building these in public with realistic constraints (offline, security, latency). Repo links appear only when the repo exists.
-      </p>
+      <h2>AI projects (built as real systems)</h2>
+      <p class="hint">These are engineered as production-ready builds. Repo links appear only when the repo exists.</p>
 
       <div class="cards">
         <article class="proj" data-repo="neural-vault"><div class="in">
-          <h3>Neural Vault — Offline document chat (RAG)</h3>
-          <p>Offline-first desktop concept: local embeddings + retrieval + quantized GGUF models. Goal: “no data leaves device”.</p>
+          <h3>Neural Vault — Offline RAG on consumer hardware</h3>
+          <p>Offline-first document chat for sensitive files. Focus: GGUF quantization, local embeddings, on-device retrieval, and RAM-aware model loading.</p>
           <div class="tags">
-            <span class="tag a">llama.cpp</span><span class="tag b">ChromaDB</span><span class="tag c">Streamlit</span><span class="tag">GGUF</span>
+            <span class="tag a">llama.cpp</span><span class="tag b">GGUF 4-bit</span><span class="tag c">ChromaDB</span><span class="tag">Local RAG</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
 
         <article class="proj" data-repo="devfix-auto-agent"><div class="in">
-          <h3>DevFix Auto-Agent — Fixes code by running tests</h3>
-          <p>CLI loop that writes code, runs tests in a sandbox, reads failures, and retries. Focus: safe execution + stateful loops.</p>
+          <h3>DevFix Auto-Agent — Self-healing coding loop</h3>
+          <p>Agent writes code, runs tests, reads failures, and retries—safely. Focus: stateful graphs, sandboxed Docker execution, AST validation, and traceable runs.</p>
           <div class="tags">
             <span class="tag a">LangGraph</span><span class="tag b">Docker</span><span class="tag c">PyTest</span><span class="tag">AST</span>
           </div>
@@ -519,47 +422,46 @@
         </div></article>
 
         <article class="proj" data-repo="echo-negotiator"><div class="in">
-          <h3>Echo Negotiator — Low-latency voice pipeline</h3>
-          <p>Streaming voice server using WebSockets + VAD. Goal: interruptible voice-to-voice with tight latency budgets.</p>
+          <h3>Echo Negotiator — Full-duplex voice AI (low latency)</h3>
+          <p>Streaming voice pipeline with interruption handling. Focus: WebSockets, VAD, async concurrency, and streaming STT→LLM→TTS with tight latency budgets.</p>
           <div class="tags">
-            <span class="tag a">FastAPI</span><span class="tag b">WebSockets</span><span class="tag c">VAD</span><span class="tag">AsyncIO</span>
+            <span class="tag a">FastAPI</span><span class="tag b">WebSockets</span><span class="tag c">VAD</span><span class="tag">Streaming</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
 
         <article class="proj" data-repo="model-smith"><div class="in">
-          <h3>Model Smith — Fine-tuning experiments</h3>
-          <p>Pipeline experiments: synthetic data → LoRA/QLoRA → evaluation. Goal: learn the full loop cleanly, not hype results.</p>
+          <h3>Model Smith — Synthetic data + PEFT fine-tuning pipeline</h3>
+          <p>End-to-end fine-tuning workflow: dataset generation, LoRA/QLoRA training, automated evaluation, and regression benchmarks for repeatability.</p>
           <div class="tags">
-            <span class="tag a">TRL</span><span class="tag b">LoRA</span><span class="tag c">W&amp;B</span><span class="tag">RAGAS</span>
+            <span class="tag a">TRL</span><span class="tag b">LoRA/QLoRA</span><span class="tag c">RAGAS</span><span class="tag">Eval harness</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
 
         <article class="proj" data-repo="nexus-flow"><div class="in">
-          <h3>Nexus Flow — Event-driven workflows</h3>
-          <p>Slack/Jira event triggers → agent routing → human approval gates. Goal: resumable workflows with persisted state.</p>
+          <h3>Nexus Flow — Event-driven multi-agent orchestration + HITL</h3>
+          <p>Backend that reacts to Slack/Jira events, routes tasks to specialists, and pauses for approvals. Focus: persisted state, resumable workflows, and guardrails.</p>
           <div class="tags">
-            <span class="tag a">LangGraph</span><span class="tag b">PostgreSQL</span><span class="tag c">Webhooks</span><span class="tag">HITL</span>
+            <span class="tag a">LangGraph</span><span class="tag b">Postgres</span><span class="tag c">Webhooks</span><span class="tag">HITL</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
 
         <article class="proj" data-repo="alter-ego"><div class="in">
-          <h3>Alter Ego — Hybrid memory (Vector + Graph)</h3>
-          <p>Personal memory experiments: vector retrieval + graph relationships + summarization to keep context small and usable.</p>
+          <h3>Alter Ego — Hybrid retrieval memory (Vector + Graph)</h3>
+          <p>Digital-twin memory system combining vector search + knowledge graph. Focus: GraphRAG patterns, summarization, and controllable “style memory”.</p>
           <div class="tags">
             <span class="tag a">Neo4j</span><span class="tag b">LangChain</span><span class="tag c">NetworkX</span><span class="tag">GraphRAG</span>
           </div>
           <p class="small repo-link" style="display:none">Repo: <a class="mono" data-repo-link href="#" target="_blank" rel="noreferrer"></a></p>
         </div></article>
       </div>
-
     </section>
 
     <section id="featured" class="section">
       <h2>Open-source / public repos</h2>
-      <p class="hint">Loaded live from GitHub (no backend). Shows recent repos with clean descriptions.</p>
+      <p class="hint">Loaded live from GitHub (no backend). Shows preferred repos first, then recent/high-signal repos.</p>
 
       <div class="repo-grid" id="repo-grid"></div>
       <div class="status-line" id="repo-status" style="margin-top:10px">Repos: <span class="warn">loading…</span></div>
@@ -567,19 +469,19 @@
 
     <section id="timeline" class="section">
       <h2>Experience timeline</h2>
-      <p class="hint">Recruiter-friendly chronology.</p>
+      <p class="hint">Clean, recruiter-friendly chronology aligned to your resume dates.</p>
 
       <div class="timeline">
         <div class="t-item">
           <div class="t-top">
             <div>
-              <div class="t-role">Platform Engineer (.NET & Azure DevOps)</div>
-              <div class="t-co">Builder AI (Engineer AI Service India Pvt Ltd)</div>
+              <div class="t-role">Platform Engineer (Cloud & DevOps)</div>
+              <div class="t-co">Builder.ai (Engineer AI Service India Pvt Ltd)</div>
             </div>
             <div class="t-dates">May 10, 2023 — Present</div>
           </div>
-          <p class="t-notes">AKS delivery, CI/CD, infra automation, storage/identity troubleshooting, production support and reliability improvements.</p>
-          <div class="tags t-tags"><span class="tag c">AKS</span><span class="tag">Azure DevOps</span><span class="tag b">Terraform/ARM</span><span class="tag">Helm/Docker</span><span class="tag a">.NET</span></div>
+          <p class="t-notes">AKS delivery, CI/CD, infra automation, storage/identity troubleshooting, production support, and reliability improvements.</p>
+          <div class="tags t-tags"><span class="tag c">AKS</span><span class="tag">Azure DevOps</span><span class="tag b">Terraform/ARM</span><span class="tag">Helm/Docker</span><span class="tag a">Reliability</span></div>
         </div>
 
         <div class="t-item">
@@ -591,43 +493,43 @@
             <div class="t-dates">Mar 23, 2022 — Feb 28, 2023</div>
           </div>
           <p class="t-notes">Cloud automation across AWS/Azure, CI/CD improvements, and support for backend systems and integrations.</p>
-          <div class="tags t-tags"><span class="tag">Azure</span><span class="tag w">AWS</span><span class="tag">CI/CD</span><span class="tag b">Automation</span></div>
+          <div class="tags t-tags"><span class="tag">Automation</span><span class="tag w">AWS</span><span class="tag">Azure</span><span class="tag b">CI/CD</span></div>
         </div>
 
         <div class="t-item">
           <div class="t-top">
             <div>
-              <div class="t-role">Team Lead (Fullstack Engineer)</div>
+              <div class="t-role">Team Lead (Delivery & Engineering)</div>
               <div class="t-co">Double Edge Consulting (BCS Technology Ltd.)</div>
             </div>
             <div class="t-dates">Jun 10, 2019 — Dec 21, 2021</div>
           </div>
-          <p class="t-notes">Airlines domain delivery: booking flows, seat map features, service development, containerization, and team leadership.</p>
-          <div class="tags t-tags"><span class="tag a">Angular</span><span class="tag a">.NET</span><span class="tag b">Docker</span><span class="tag c">K8s/Helm</span></div>
+          <p class="t-notes">Airlines delivery: booking + seat-map features, containerization, release support, and team leadership across critical workflows.</p>
+          <div class="tags t-tags"><span class="tag">Delivery</span><span class="tag b">Docker</span><span class="tag c">K8s/Helm</span><span class="tag">Operational support</span></div>
         </div>
 
         <div class="t-item">
           <div class="t-top">
             <div>
-              <div class="t-role">Senior Software Engineer (Cloud)</div>
+              <div class="t-role">Senior Software Engineer (Integrations)</div>
               <div class="t-co">Datasoft Technologies</div>
             </div>
             <div class="t-dates">Aug 12, 2018 — Jun 8, 2019</div>
           </div>
-          <p class="t-notes">Healthcare integration with EHR providers, SAML auth, and HL7/FHIR workflows.</p>
-          <div class="tags t-tags"><span class="tag">EHR</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag a">.NET Core</span></div>
+          <p class="t-notes">Healthcare integration with EHR providers, SAML auth, and HL7/FHIR workflows; delivery under compliance constraints.</p>
+          <div class="tags t-tags"><span class="tag">EHR</span><span class="tag b">SAML</span><span class="tag c">HL7/FHIR</span><span class="tag">Integration</span></div>
         </div>
 
         <div class="t-item">
           <div class="t-top">
             <div>
-              <div class="t-role">Web Developer (.NET + Angular + Azure)</div>
+              <div class="t-role">Web Developer (Cloud Apps)</div>
               <div class="t-co">Eudemonic Technologies Pvt. Ltd.</div>
             </div>
             <div class="t-dates">May 22, 2017 — Aug 3, 2018</div>
           </div>
-          <p class="t-notes">Fullstack apps with Angular + .NET/Node; SQL Server; Azure-hosted deployments and tooling.</p>
-          <div class="tags t-tags"><span class="tag a">Angular</span><span class="tag">.NET</span><span class="tag">SQL Server</span><span class="tag">Azure</span></div>
+          <p class="t-notes">Full-stack web apps, SQL-backed systems, and Azure-hosted deployments with practical ops responsibilities.</p>
+          <div class="tags t-tags"><span class="tag">Azure</span><span class="tag">SQL</span><span class="tag b">Delivery</span><span class="tag">Ops</span></div>
         </div>
 
         <div class="t-item">
@@ -638,77 +540,75 @@
             </div>
             <div class="t-dates">Aug 16, 2016 — Mar 17, 2017</div>
           </div>
-          <p class="t-notes">ASP.NET MVC + legacy scripts; small modernization work and UI delivery.</p>
-          <div class="tags t-tags"><span class="tag a">ASP.NET MVC</span><span class="tag">Legacy</span></div>
+          <p class="t-notes">Built and maintained web apps; delivered features from mockups; supported legacy modernization.</p>
+          <div class="tags t-tags"><span class="tag">Modernization</span><span class="tag">Web</span></div>
         </div>
 
         <div class="t-item" style="margin-bottom:0">
           <div class="t-top">
             <div>
-              <div class="t-role">Software Engineer (.NET)</div>
+              <div class="t-role">Software Engineer</div>
               <div class="t-co">Process Nine Technologies Pvt. Ltd.</div>
             </div>
             <div class="t-dates">Dec 11, 2013 — Jul 29, 2016</div>
           </div>
-          <p class="t-notes">ASP.NET MVC and .NET Framework websites/APIs; foundational engineering and delivery work.</p>
-          <div class="tags t-tags"><span class="tag a">.NET Framework</span><span class="tag a">ASP.NET MVC</span><span class="tag">Web APIs</span></div>
+          <p class="t-notes">Foundational engineering work across websites/APIs and delivery responsibilities.</p>
+          <div class="tags t-tags"><span class="tag">Foundations</span><span class="tag">Web APIs</span></div>
         </div>
       </div>
     </section>
 
-<section id="skills" class="section">
-  <h2>Skills</h2>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <p class="hint">Platform engineering + cloud delivery + AI systems engineering (tools & frameworks).</p>
 
-  <div class="grid">
-    <div class="mini span-6">
-      <h3>Platform / DevOps</h3>
-      <ul class="list">
-        <li>Kubernetes (AKS) • Helm • Docker • Kustomize</li>
-        <li>Ingress & Networking • AGIC/Nginx • DNS • TLS/Certificates</li>
-        <li>Azure DevOps • CI/CD pipelines • release/rollback • artifact promotion</li>
-        <li>Terraform • ARM/Bicep • policy guardrails • environment automation</li>
-        <li>Identity & Secrets • Workload Identity • RBAC • Key Vault • CSI drivers</li>
-        <li>Storage • Azure Files/Blob • PV/PVC • backup/restore • multi-tenant patterns</li>
-        <li>Observability • logs/metrics/traces • SLO/SLI • alerting • incident response</li>
-      </ul>
-    </div>
+      <div class="grid">
+        <div class="mini span-6">
+          <h3>Cloud / Platform / DevOps</h3>
+          <ul class="list">
+            <li>Azure: AKS, Functions, Storage, Key Vault, App Config</li>
+            <li>Kubernetes: Helm, Kustomize, Ingress, RBAC, PV/PVC, CSI</li>
+            <li>Identity: Workload Identity, UAMI, RBAC, secrets management</li>
+            <li>IaC: Terraform, ARM/Bicep (concepts), config templating</li>
+            <li>CI/CD: Azure DevOps, build/release pipelines, rollback strategies</li>
+            <li>Ops: incident response, runbooks, alerting, reliability improvements</li>
+          </ul>
+        </div>
 
-    <div class="mini span-6">
-      <h3>AI / LLM engineering (hands-on)</h3>
-      <ul class="list">
-        <li>RAG • chunking strategies • hybrid retrieval • re-ranking • grounding</li>
-        <li>Vector stores • ChromaDB • FAISS • pgvector • Pinecone (concepts)</li>
-        <li>Local inference • llama.cpp • GGUF quantization • Ollama (runtime)</li>
-        <li>LLM frameworks • LangChain • LangGraph • prompt templates • tool calling</li>
-        <li>Agents • stateful graphs • memory patterns • sandboxed execution</li>
-        <li>Evaluation • RAGAS • offline eval sets • regression harnesses • A/B prompts</li>
-        <li>Fine-tuning • LoRA/QLoRA • TRL • (Unsloth concepts) • dataset curation</li>
-        <li>Safety • prompt injection defenses • output filtering • secure tool boundaries</li>
-      </ul>
-    </div>
+        <div class="mini span-6">
+          <h3>AI / LLM Engineering (practical)</h3>
+          <ul class="list">
+            <li>RAG: chunking, embedding search, hybrid retrieval, grounding</li>
+            <li>Vector DBs: ChromaDB, FAISS, pgvector (concepts)</li>
+            <li>Local inference: llama.cpp, GGUF quantization, Ollama (runtime)</li>
+            <li>Agents: LangGraph, tool calling, stateful graphs, memory patterns</li>
+            <li>Eval: RAGAS (concepts), regression datasets, prompt A/B testing</li>
+            <li>Fine-tuning: LoRA/QLoRA, TRL (concepts), synthetic data pipelines</li>
+            <li>Realtime voice: WebSockets, VAD concepts, streaming pipelines</li>
+          </ul>
+        </div>
 
-    <div class="mini span-6">
-      <h3>AI systems & data engineering</h3>
-      <ul class="list">
-        <li>Embeddings • OpenAI/HF model families (concepts) • similarity search</li>
-        <li>Data pipelines • text extraction • document normalization • metadata design</li>
-        <li>Stores • Postgres • Redis • Neo4j/graphs (concepts) • caching patterns</li>
-        <li>Async & streaming • WebSockets • backpressure • queues/event-driven patterns</li>
-        <li>Latency tuning • batching • concurrency limits • cost-aware architecture</li>
-      </ul>
-    </div>
+        <div class="mini span-6">
+          <h3>Backend / Systems</h3>
+          <ul class="list">
+            <li>Python: FastAPI, AsyncIO, background workers</li>
+            <li>Data: SQL Server, Postgres, Redis (concepts)</li>
+            <li>Event-driven: queues/webhooks, retries, idempotency patterns</li>
+            <li>Security: secure execution, least privilege, audit-friendly design</li>
+          </ul>
+        </div>
 
-    <div class="mini span-6">
-      <h3>Backend / APIs</h3>
-      <ul class="list">
-        <li>Python • FastAPI • AsyncIO • background workers</li>
-        <li>REST • GraphQL (concepts) • auth patterns • rate limiting</li>
-        <li>SQL Server • Postgres • schema design • performance basics</li>
-        <li>React/TypeScript (for internal tools) • integration UI</li>
-      </ul>
-    </div>
-  </div>
-</section>
+        <div class="mini span-6">
+          <h3>Product Engineering</h3>
+          <ul class="list">
+            <li>React / TypeScript (internal tools & portals)</li>
+            <li>API design: REST, auth patterns, rate limiting</li>
+            <li>Integrations: airlines workflows, healthcare/EHR concepts</li>
+            <li>Documentation: design notes, runbooks, onboarding guides</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <section class="section" aria-label="contact">
       <div class="mini" id="contact-section" style="margin-top:12px">
@@ -749,7 +649,6 @@
 
     function setStatus(el, html){ if (el) el.innerHTML = html; }
 
-    // Hide repo links until repo exists (but don't show "0 repos found" messaging)
     async function wireAiRepoLinks(){
       const cards = Array.from(document.querySelectorAll('article.proj[data-repo]'));
       await Promise.all(cards.map(async (card) => {
@@ -772,15 +671,13 @@
         }
       }));
 
-      setStatus(document.getElementById("gh-status"), `GitHub: <span class="ok">loaded</span> • showing public repos below`);
+      setStatus(document.getElementById("gh-status"), `GitHub: <span class="ok">loaded</span> • public repos auto-loaded below`);
     }
 
-    // Featured repos: clean fallback descriptions (no “No description yet.”)
     function safeDesc(repo){
       const d = (repo.description || "").trim();
       if (d) return d;
-      if (repo.homepage && repo.homepage.trim()) return `Project homepage: ${repo.homepage.trim()}`;
-      // fallback text that looks normal
+      if (repo.homepage && repo.homepage.trim()) return `Homepage: ${repo.homepage.trim()}`;
       return `Public repository — last updated ${ago(repo.updated_at)}.`;
     }
 
@@ -821,7 +718,6 @@
         if (!res.ok) throw new Error("GitHub API error");
         const repos = await res.json();
 
-        // prefer AI repos if they exist, else fall back to most-starred / updated
         const byName = new Map(repos.map(r => [r.name, r]));
         const preferred = AI_REPOS.map(n => byName.get(n)).filter(Boolean);
 
